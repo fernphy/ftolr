@@ -1,0 +1,40 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# ftolr
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+ftolr provides access to the Fern Tree of Life (FTOL) and related datasets.
+
+## Installation
+
+You can install the development version of ftolr from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("joelnitta/ftolr")
+```
+
+## Example
+
+The `ft_tree()` function loads FTOL into your R session. There are several options available to control branch lengths, presence or absence of outgroup, and sampling scheme.
+
+```{r example}
+library(ftolr)
+# Load the full, ultrametric tree
+ft_tree("full", "ultra")
+```
