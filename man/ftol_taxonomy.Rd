@@ -7,16 +7,16 @@
 \format{
 A tibble (data frame) with 5581 rows and
 8 columns.
-\describe{
-\item{species}{Species name}
+\describe{ \item{species}{Species name}
 \item{genus}{Genus name}
 \item{subfamily}{Subfamily name}
 \item{family}{Family name}
 \item{suborder}{Suborder name}
 \item{order}{Order name}
-\item{major_clade}{Informal higher level clade name, either order or suborder}
-\item{outgroup}{Logical; TRUE for outgroup taxa, FALSE for ingroup taxa (ferns)}
-}
+\item{major_clade}{Informal higher level clade
+name, either order or suborder}
+\item{outgroup}{Logical; TRUE for outgroup taxa, FALSE for ingroup
+taxa (ferns)} }
 }
 \usage{
 ftol_taxonomy
@@ -29,12 +29,11 @@ recommended to use the \code{tibble} library (\code{library(tibble)}).
 Taxonomy follows Pteridophyte Phylogeny Group I (2016).
 }
 \references{
-Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W.
-(2022) An open and continuously updated Fern Tree of Life (FTOL).
-FIXME ADD DOI
+Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
+open and continuously updated Fern Tree of Life (FTOL). FIXME ADD DOI
 
 Pteridophyte Phylogeny Group I (2016) A community-derived
-classification for extant lycophytes and ferns. Journal of Systematics
-and Evolution 54:563–603. \url{https://doi.org/10.1111/jse.12229}
+classification for extant lycophytes and ferns. Journal of Systematics and
+Evolution 54:563–603. \url{https://doi.org/10.1111/jse.12229}
 }
 \keyword{datasets}
