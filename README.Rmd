@@ -1,5 +1,7 @@
 ---
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -18,7 +20,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-ftolr provides access to the Fern Tree of Life (FTOL) and related datasets.
+ftolr is an R package that provides access to the [Fern Tree of Life (FTOL)](https://fernphy.github.io/) and related datasets.
 
 ## Installation
 
@@ -29,12 +31,14 @@ You can install the development version of ftolr from [GitHub](https://github.co
 devtools::install_github("joelnitta/ftolr")
 ```
 
-## Example
+## Examples
+
+### Fern Tree of Life (FTOL)
 
 The `ft_tree()` function loads FTOL into the current R session.
 There are several options available to control branch lengths, presence or absence of outgroup, and sampling scheme.
 
-```{r example}
+```{r tree-example}
 library(ftolr)
 # Default: maximum-likelihood (ML) tree with branchlengths in units of time
 ft_tree()
@@ -45,3 +49,17 @@ ft_tree(
   drop_og = TRUE
 ) 
 ```
+
+### DNA sequences
+
+The DNA sequences used to build the tree are also available.
+These can be subset by locus (gene) name and can be formatted as a matrix (DNA alignment) or a list.
+
+```{r seq-example}
+# Default: aligned Sanger sequences
+ft_seqs()
+
+# Unaligned rbcL
+ft_seqs(loci = "rbcL", aligned = FALSE)
+```
+

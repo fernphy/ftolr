@@ -6,8 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-ftolr provides access to the Fern Tree of Life (FTOL) and related
-datasets.
+ftolr is an R package that provides access to the [Fern Tree of Life
+(FTOL)](https://fernphy.github.io/) and related datasets.
 
 ## Installation
 
@@ -19,7 +19,9 @@ You can install the development version of ftolr from
 devtools::install_github("joelnitta/ftolr")
 ```
 
-## Example
+## Examples
+
+### Fern Tree of Life (FTOL)
 
 The `ft_tree()` function loads FTOL into the current R session. There
 are several options available to control branch lengths, presence or
@@ -53,4 +55,52 @@ ft_tree(
 #>   100/100, 100/100, 100/100, 100/100, 100/100, 100/100, ...
 #> 
 #> Rooted; includes branch lengths.
+```
+
+### DNA sequences
+
+The DNA sequences used to build the tree are also available. These can
+be subset by locus (gene) name and can be formatted as a matrix (DNA
+alignment) or a list.
+
+``` r
+# Default: aligned Sanger sequences
+ft_seqs()
+#> 5581 DNA sequences in binary format stored in a matrix.
+#> 
+#> All sequences of same length: 12118 
+#> 
+#> Labels:
+#> Acrostichum_danaeifolium
+#> Actiniopteris_dimorpha
+#> Actiniopteris_semiflabellata
+#> Adenophorus_tenellus
+#> Adiantopsis_alata
+#> Adiantopsis_aurea
+#> ...
+#> 
+#> More than 10 million bases: not printing base composition.
+#> (Total: 67.63 Mb)
+
+# Unaligned rbcL
+ft_seqs(loci = "rbcL", aligned = FALSE)
+#> 4796 DNA sequences in binary format stored in a list.
+#> 
+#> Mean sequence length: 1247.184 
+#>    Shortest sequence: 210 
+#>     Longest sequence: 1402 
+#> 
+#> Labels:
+#> Acrostichum_danaeifolium
+#> Actiniopteris_dimorpha
+#> Actiniopteris_semiflabellata
+#> Adenophorus_tenellus
+#> Adiantopsis_alata
+#> Adiantopsis_aurea
+#> ...
+#> 
+#> Base composition:
+#>     a     c     g     t 
+#> 0.265 0.217 0.252 0.266 
+#> (Total: 5.98 Mb)
 ```
