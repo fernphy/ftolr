@@ -3,5 +3,9 @@ utils::globalVariables(
     "backbone_tree",
     "ftol_ml_tree",
     "ftol_time_tree",
-    "ftol_ferns"
+    "ftol_ferns",
+    "plastome_alignment",
+    "plastome_parts",
+    "sanger_alignment",
+    "sanger_parts"
   ))
