@@ -2,57 +2,67 @@
 #'
 #' For details on methods used to infer the tree, see Nitta et al. 2022.
 #'
-#' @param sampling Character vector of length 1; sampling scheme to use when
-#'   loading tree. Must choose either `"backbone"` (the backbone phylogeny,
-#'   including only species with whole plastome data avaiable) or `"full"` (the
-#'   full phylogeny).
-#' @param bl Character vector of length 1; how to treat branch lengths. Must
-#'   choose from `"ultra"` (ultrametric tree, branchlengths in units of time),
-#'   `"raw"` (raw branchlengths in units of genetic change), or `"clado"`
-#'   (cladogram, no branchlengths). `"ultra"` is only available if `sampling` is
-#'   `"full"`.
+#' Not all combinations are possible. For example, `branch_len = "ultra"` is
+#' only available if `backbone = FALSE`.
+#'
+#' @param branch_len Character vector of length 1; how to treat branch lengths.
+#'   Must choose from `"ultra"` (ultrametric tree, branchlengths in units of
+#'   time), `"raw"` (raw branchlengths in units of genetic change), or `"clado"`
+#'   (cladogram, no branchlengths).  Default `"ultra"`.
+#' @param backbone Logical vector of length 1; If `TRUE`, the backbone phylogeny
+#'   (only species with complete plastomes available) will be returned;
+#'   otherwise the phylogeny will include all species. Default `FALSE`.
+#' @param consensus Logical vector of length 1; If `TRUE`, the consensus
+#'   phylogeny will be returned (may include polytomies); otherwise returns the
+#'   maximum-likelihood (bifurcating) tree. Default `FALSE`.
 #' @param drop_og Logical vector of length 1; If `TRUE`, the outgroup will be
-#'   excluded.
+#'   excluded; otherwise the outgroup is included. Default `FALSE`.
+#' @param rooted Logical vector of length 1; If `TRUE`, the phylogeny will be
+#'   rooted on bryophytes; otherwise the phylogeny is unrooted. Default `TRUE`.
 #'
 #' @return List of class "phylo"; a phylogenetic tree.
 #' @export
 #'
 #' @examples
-#' ft_tree("full", "ultra")
+#' # Default is the maximum-likelihood tree with branchlengths in units of time
+#' ft_tree()
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 #'   open and continuously updated Fern Tree of Life (FTOL). FIXME ADD DOI
 ft_tree <- function(
-  sampling = c("backbone", "full"),
-  bl = c("ultra", "raw", "clado"),
-  drop_og = FALSE
+  branch_len = "ultra",
+  backbone = FALSE,
+  consensus = FALSE,
+  drop_og = FALSE,
+  rooted = TRUE
 ) {
-  assertthat::assert_that(assertthat::is.string(sampling))
+  # Check arguments
+  assertthat::assert_that(assertthat::is.string(branch_len))
   assertthat::assert_that(
-    sampling %in% c("backbone", "full"),
-    msg = "'sampling' must be one of 'backbone' or 'full'")
-  assertthat::assert_that(assertthat::is.string(bl))
-  assertthat::assert_that(
-    bl %in% c("ultra", "raw", "clado"),
-    msg = "'bl' must be one of 'ultra', 'raw', or 'clado'")
+    branch_len %in% c("ultra", "raw", "clado"),
+    msg = "'branch_len' must be one of 'ultra', 'raw', or 'clado'")
+  assertthat::assert_that(assertthat::is.flag(backbone))
   assertthat::assert_that(assertthat::is.flag(drop_og))
+  assertthat::assert_that(assertthat::is.flag(rooted))
 
+  # Check arg combinations
   assertthat::assert_that(
-    !(sampling == "backbone" && bl == "clado"),
-    msg = "'bl' cannot be set to 'clado' when 'sampling' is set to 'full'"
+    !(backbone == TRUE && branch_len == "clado"),
+    msg = "'branch_len' cannot be set to 'caldo' when 'backbone' is set to 'TRUE'"
   )
 
-  if (sampling == "backbone") {
+  # Choose starting tree
+  if (backbone == TRUE) {
     phy <- backbone_tree
-  } else if (sampling == "full" && bl == "raw") {
+  } else if (backbone == FALSE && branch_len == "raw") {
     phy <- ftol_ml_tree
-  } else if (sampling == "full" && bl == "ultra") {
+  } else if (backbone == FALSE && branch_len == "ultra") {
     phy <- ftol_time_tree
   }
 
-  if (bl == "clado") phy$edge.length <- NULL
-
+  # Make adjustments
+  if (branch_len == "clado") phy$edge.length <- NULL
   if (drop_og == TRUE) phy <- ape::keep.tip(phy, ftol_ferns)
+  if (rooted == FALSE) phy <- ape::unroot(phy, ftol_ferns)
 
-  phy
-
+  return(phy)
 }

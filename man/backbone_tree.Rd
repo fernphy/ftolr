@@ -15,9 +15,9 @@ A maximum-likelihood phylogenetic tree inferred from whole fern plastomes,
 including maximal sampling of available species on GenBank.
 }
 \details{
-Includes 429 tips and 427
-internal nodes. Branch lengths are in units of estimated genetic change (not
-ultrametric). Node labels are bootstrap support (\%).
+Includes 429 tips and 428
+internal nodes. Branch lengths are in units of estimated genetic change per
+site (not ultrametric). Node labels are bootstrap support (\%).
 
 For details on methods used to infer the tree, see Nitta et al. 2022.
 }

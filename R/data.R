@@ -4,8 +4,8 @@
 #' including maximal sampling of available species on GenBank.
 #'
 #' Includes `r ape::Ntip(backbone_tree)` tips and `r ape::Nnode(backbone_tree)`
-#' internal nodes. Branch lengths are in units of estimated genetic change (not
-#' ultrametric). Node labels are bootstrap support (%).
+#' internal nodes. Branch lengths are in units of estimated genetic change per
+#' site (not ultrametric). Node labels are bootstrap support (%).
 #'
 #' For details on methods used to infer the tree, see Nitta et al. 2022.
 #'
@@ -20,8 +20,8 @@
 #' including maximal sampling of available species on GenBank.
 #'
 #' Includes `r ape::Ntip(ftol_ml_tree)` tips and `r ape::Nnode(ftol_ml_tree)`
-#' internal nodes. Branch lengths are in units of estimated genetic change (not
-#' ultrametric). Node labels are bootstrap support (%).
+#' internal nodes. Branch lengths are in units of estimated genetic change per
+#' site (not ultrametric). Node labels are bootstrap support (%).
 #'
 #' For details on methods used to infer the tree, see Nitta et al. 2022.
 #'

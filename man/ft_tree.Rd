@@ -5,25 +5,32 @@
 \title{Load the Fern Tree of Life (FTOL)}
 \usage{
 ft_tree(
-  sampling = c("backbone", "full"),
-  bl = c("ultra", "raw", "clado"),
-  drop_og = FALSE
+  branch_len = "ultra",
+  backbone = FALSE,
+  consensus = FALSE,
+  drop_og = FALSE,
+  rooted = TRUE
 )
 }
 \arguments{
-\item{sampling}{Character vector of length 1; sampling scheme to use when
-loading tree. Must choose either \code{"backbone"} (the backbone phylogeny,
-including only species with whole plastome data avaiable) or \code{"full"} (the
-full phylogeny).}
+\item{branch_len}{Character vector of length 1; how to treat branch lengths.
+Must choose from \code{"ultra"} (ultrametric tree, branchlengths in units of
+time), \code{"raw"} (raw branchlengths in units of genetic change), or \code{"clado"}
+(cladogram, no branchlengths).  Default \code{"ultra"}.}
 
-\item{bl}{Character vector of length 1; how to treat branch lengths. Must
-choose from \code{"ultra"} (ultrametric tree, branchlengths in units of time),
-\code{"raw"} (raw branchlengths in units of genetic change), or \code{"clado"}
-(cladogram, no branchlengths). \code{"ultra"} is only available if \code{sampling} is
-\code{"full"}.}
+\item{backbone}{Logical vector of length 1; If \code{TRUE}, the backbone phylogeny
+(only species with complete plastomes available) will be returned;
+otherwise the phylogeny will include all species. Default \code{FALSE}.}
+
+\item{consensus}{Logical vector of length 1; If \code{TRUE}, the consensus
+phylogeny will be returned (may include polytomies); otherwise returns the
+maximum-likelihood (bifurcating) tree. Default \code{FALSE}.}
 
 \item{drop_og}{Logical vector of length 1; If \code{TRUE}, the outgroup will be
-excluded.}
+excluded; otherwise the outgroup is included. Default \code{FALSE}.}
+
+\item{rooted}{Logical vector of length 1; If \code{TRUE}, the phylogeny will be
+rooted on bryophytes; otherwise the phylogeny is unrooted. Default \code{TRUE}.}
 }
 \value{
 List of class "phylo"; a phylogenetic tree.
@@ -31,8 +38,13 @@ List of class "phylo"; a phylogenetic tree.
 \description{
 For details on methods used to infer the tree, see Nitta et al. 2022.
 }
+\details{
+Not all combinations are possible. For example, \code{branch_len = "ultra"} is
+only available if \code{backbone = FALSE}.
+}
 \examples{
-ft_tree("full", "ultra")
+# Default is the maximum-likelihood tree with branchlengths in units of time
+ft_tree()
 }
 \references{
 Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
