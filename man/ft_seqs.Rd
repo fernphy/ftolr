@@ -4,7 +4,12 @@
 \alias{ft_seqs}
 \title{Load the DNA sequences used to build the Fern Tree of Life (FTOL)}
 \usage{
-ft_seqs(loci = NULL, plastome = FALSE, aligned = TRUE)
+ft_seqs(
+  loci = NULL,
+  plastome = FALSE,
+  aligned = TRUE,
+  del_gaps = ifelse(is.null(loci), FALSE, TRUE)
+)
 }
 \arguments{
 \item{loci}{Character vector (optional); names of loci to include in the
@@ -19,6 +24,10 @@ will include Sanger loci and all species. Default \code{FALSE}.}
 \item{aligned}{Logical vector of length 1; If \code{TRUE}, the output will be
 aligned sequences (matrix); otherwise will be unaligned (list).
 Default \code{TRUE}.}
+
+\item{del_gaps}{Logical vector of length 1; If \code{TRUE}, all gaps
+will be deleted from the alignment. Default is \code{TRUE} if \code{loci} is \code{NULL},
+\code{FALSE} otherwise.}
 }
 \value{
 List or matrix of class "DNAbin"; DNA sequences.
