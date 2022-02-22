@@ -16,9 +16,11 @@ Imports:
     ape,
     assertthat
 Suggests: 
+    stringr,
     dplyr,
     readr,
     tibble
 Depends: 
     R (>= 2.10)
 LazyData: true
+LazyDataCompression: bzip2

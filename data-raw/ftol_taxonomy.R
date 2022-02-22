@@ -1,6 +1,6 @@
-## code to prepare `ftol_taxonomy` dataset goes here
+## code to prepare taxonomy datasets goes here
 
-ftol_taxonomy <- readr::read_csv(here::here("data-raw/sanger_sampling.csv")) |>
+ftol_taxonomy <- readr::read_csv(here::here("data-raw/ftol_sanger_sampling.csv")) |>
   dplyr::select(
     species, genus, subfamily, family, suborder, order, major_clade,
     outgroup)
@@ -15,5 +15,4 @@ if (length(ftol_ferns) != dplyr::n_distinct(ftol_ferns)) {
 }
 
 usethis::use_data(ftol_taxonomy, overwrite = TRUE)
-
 usethis::use_data(ftol_ferns, overwrite = TRUE)

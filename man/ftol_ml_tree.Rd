@@ -15,9 +15,9 @@ A maximum-likelihood phylogenetic tree of ferns inferred from seven loci,
 including maximal sampling of available species on GenBank.
 }
 \details{
-Includes 5581 tips and 5579
-internal nodes. Branch lengths are in units of estimated genetic change (not
-ultrametric). Node labels are bootstrap support (\%).
+Includes 5581 tips and 5580
+internal nodes. Branch lengths are in units of estimated genetic change per
+site (not ultrametric). Node labels are bootstrap support (\%).
 
 For details on methods used to infer the tree, see Nitta et al. 2022.
 }
