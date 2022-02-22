@@ -1,10 +1,10 @@
 ## code to prepare alignment datasets goes here
 
 plastome_alignment <- ape::read.FASTA(
-  here::here("data-raw/ftol_plastome_alignment.fasta")) |>
+  here::here("data-raw/ftol_plastome_alignment.fasta.gz")) |>
   as.matrix()
 sanger_alignment <- ape::read.FASTA(
-  here::here("data-raw/ftol_sanger_alignment.fasta")) |>
+  here::here("data-raw/ftol_sanger_alignment.fasta.gz")) |>
   as.matrix()
 
 plastome_parts <- readr::read_csv(here::here("data-raw/ftol_plastome_parts.csv"))
