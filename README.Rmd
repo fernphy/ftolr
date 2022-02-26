@@ -40,12 +40,13 @@ There are several options available to control branch lengths, presence or absen
 
 ```{r tree-example}
 library(ftolr)
-# Default: maximum-likelihood (ML) tree with branchlengths in units of time
+# Default: consensus tree with branchlengths in units of time
 ft_tree()
 
-# ML tree with raw branchlengths and outgroup pruned
+# Maximum-likelihood (ML) tree with raw branchlengths and outgroup pruned
 ft_tree(
   branch_len = "raw",
+  consensus = FALSE,
   drop_og = TRUE
 ) 
 ```

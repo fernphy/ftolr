@@ -9,32 +9,32 @@
 #'   Must choose from `"ultra"` (ultrametric tree, branchlengths in units of
 #'   time), `"raw"` (raw branchlengths in units of genetic change), or `"clado"`
 #'   (cladogram, no branchlengths).  Default `"ultra"`.
+#' @param consensus Logical vector of length 1; If `TRUE`, the majority-rule
+#'   extended consensus phylogeny will be returned; otherwise returns the
+#'   maximum-likelihood tree. Default `TRUE`.
+#' @param rooted Logical vector of length 1; If `TRUE`, the phylogeny will be
+#'   rooted on bryophytes; otherwise the phylogeny is unrooted. Default `TRUE`.
 #' @param backbone Logical vector of length 1; If `TRUE`, the backbone phylogeny
 #'   (only species with complete plastomes available) will be returned;
 #'   otherwise the phylogeny will include all species. Default `FALSE`.
-#' @param consensus Logical vector of length 1; If `TRUE`, the majority-rule
-#'   extended consensus phylogeny will be returned; otherwise returns the
-#'   maximum-likelihood tree. Default `FALSE`.
 #' @param drop_og Logical vector of length 1; If `TRUE`, the outgroup
 #'   (non-ferns) will be excluded; otherwise the outgroup is included. Default
 #'   `FALSE`.
-#' @param rooted Logical vector of length 1; If `TRUE`, the phylogeny will be
-#'   rooted on bryophytes; otherwise the phylogeny is unrooted. Default `TRUE`.
 #'
 #' @return List of class "phylo"; a phylogenetic tree.
 #' @export
 #'
 #' @examples
-#' # Default is the maximum-likelihood tree with branchlengths in units of time
+#' # Default is the consensus tree with branchlengths in units of time
 #' ft_tree()
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 #'   open and continuously updated Fern Tree of Life (FTOL). FIXME ADD DOI
 ft_tree <- function(
   branch_len = "ultra",
+  consensus = TRUE,
+  rooted = TRUE,
   backbone = FALSE,
-  consensus = FALSE,
-  drop_og = FALSE,
-  rooted = TRUE
+  drop_og = FALSE
 ) {
   # Check arguments
   assertthat::assert_that(assertthat::is.string(branch_len))
