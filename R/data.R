@@ -137,11 +137,14 @@
 
 #' Fern Tree of Life (FTOL) backbone phylogeny
 #'
-#' A maximum-likelihood phylogenetic tree inferred from whole fern plastomes,
-#' including maximal sampling of available species on GenBank.
+#' Majority-rule extended consensus phylogenetic tree inferred from whole fern
+#' plastomes by maximum-likelihood, including maximal sampling of available
+#' species on GenBank.
 #'
-#' Includes `r ape::Ntip(backbone_tree) |> scales::number(big.mark = ",")`
-#' tips and `r ape::Nnode(backbone_tree) |> scales::number(big.mark = ",")`
+#' Includes
+#' `r ape::Ntip(backbone_tree) |> scales::number(big.mark = ",")`
+#' tips and
+#' `r ape::Nnode(backbone_tree) |> scales::number(big.mark = ",")`
 #' internal nodes. Branch lengths are in units of estimated genetic change per
 #' site (not ultrametric). Node labels are bootstrap support (%).
 #'
@@ -154,12 +157,23 @@
 
 #' Fern Tree of Life (FTOL) maximum-likelihood phylogeny
 #'
-#' A maximum-likelihood phylogenetic tree of ferns inferred from seven loci,
-#' including maximal sampling of available species on GenBank.
+#' A maximum-likelihood (ML) phylogenetic tree of ferns inferred from seven
+#' loci, including maximal sampling of available species on GenBank.
 #'
-#' Includes `r ape::Ntip(ftol_ml_tree)` tips and `r ape::Nnode(ftol_ml_tree)`
+#' A [backbone phylogeny][backbone_tree] based on full plastome sequences
+#' including
+#' `r ape::Nnode(backbone_tree) |> scales::number(big.mark = ",")`
+#' tips was first inferred and used as a constraint tree for the ML tree.
+#'
+#' Includes
+#' `r ape::Ntip(ftol_ml_tree) |> scales::number(big.mark = ",")`
+#' tips and
+#' `r ape::Nnode(ftol_ml_tree) |> scales::number(big.mark = ",")`
 #' internal nodes. Branch lengths are in units of estimated genetic change per
-#' site (not ultrametric). Node labels are bootstrap support (%).
+#' site (not ultrametric). Node labels are bootstrap support (BS) values (%)
+#' separated by a forward slash. BS value before the slash is BS calculated
+#' from the full (Sanger) sampling; BS value after the slash is BS calculated
+#' from the backbone (plastome) sampling.
 #'
 #' For details on methods used to infer the tree, see Nitta et al. 2022.
 #'
@@ -168,22 +182,82 @@
 #'   open and continuously updated Fern Tree of Life (FTOL). FIXME ADD DOI
 "ftol_ml_tree"
 
-#' Fern Tree of Life (FTOL) dated phylogeny
+#' Fern Tree of Life (FTOL) dated maximum-likelihood phylogeny
 #'
-#' A phylogenetic tree of ferns inferred from seven loci and dated using 60
-#' fossil ferns as constraints, including maximal sampling of available species
-#' on GenBank
+#' A maximum-likelihood (ML) phylogenetic tree of ferns inferred from seven loci
+#' and dated using 60 fossil ferns as constraints, including maximal sampling of
+#' available species on GenBank.
 #'
-#' Includes `r ape::Ntip(ftol_time_tree)` tips and
-#' `r ape::Nnode(ftol_time_tree)` internal nodes. Branch lengths are in units of
-#' time (Ma). Node labels are bootstrap support (%).
+#' A [backbone phylogeny][backbone_tree] based on full plastome
+#' sequences including
+#' `r ape::Nnode(backbone_tree) |> scales::number(big.mark = ",")`
+#' tips was first inferred and used as a constraint tree for the ML tree.
+#'
+#' Includes
+#' `r ape::Ntip(ftol_ml_dated_tree) |> scales::number(big.mark = ",")`
+#' tips and
+#' `r ape::Nnode(ftol_ml_dated_tree) |> scales::number(big.mark = ",")`
+#' internal nodes. Branch lengths are in units of time (Ma). Node labels are
+#' bootstrap support (BS) values (%) separated by a forward slash. BS value
+#' before the slash is BS calculated from the full (Sanger) sampling; BS value
+#' after the slash is BS calculated from the backbone (plastome) sampling.
 #'
 #' For details on methods used to infer the tree, see Nitta et al. 2022.
 #'
 #' @format List of class "phylo"
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 #'   open and continuously updated Fern Tree of Life (FTOL). FIXME ADD DOI
-"ftol_time_tree"
+"ftol_ml_dated_tree"
+
+#' Fern Tree of Life (FTOL) consensus phylogeny
+#'
+#' Majority-rule extended consensus phylogenetic tree of ferns inferred from
+#' seven loci by maximum-likelihood, including maximal sampling of available
+#' species on GenBank.
+#'
+#' A [backbone phylogeny][backbone_tree] based on full plastome sequences
+#' including
+#' `r ape::Nnode(backbone_tree) |> scales::number(big.mark = ",")`
+#' tips was first inferred and used as a constraint tree for the consensus tree.
+#'
+#' Includes
+#' `r ape::Ntip(ftol_con_tree) |> scales::number(big.mark = ",")`
+#' tips and
+#' `r ape::Nnode(ftol_con_tree) |> scales::number(big.mark = ",")`
+#' internal nodes. Branch lengths are in units of estimated genetic change per
+#' site (not ultrametric). Node labels are bootstrap support (BS) values (%).
+#'
+#' For details on methods used to infer the tree, see Nitta et al. 2022.
+#'
+#' @format List of class "phylo"
+#' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
+#'   open and continuously updated Fern Tree of Life (FTOL). FIXME ADD DOI
+"ftol_con_tree"
+
+#' Fern Tree of Life (FTOL) dated consensus phylogeny
+#'
+#' Majority-rule extended consensus phylogenetic tree of ferns inferred from
+#' seven loci by maximum-likelihood and dated using 60 fossil ferns as
+#' constraints, including maximal sampling of available species on GenBank.
+#'
+#' A [backbone phylogeny][backbone_tree] based on full plastome sequences
+#' including
+#' `r ape::Nnode(backbone_tree) |> scales::number(big.mark = ",")`
+#' tips was first inferred and used as a constraint tree for the consensus tree.
+#'
+#' Includes
+#' `r ape::Ntip(ftol_con_dated_tree) |> scales::number(big.mark = ",")`
+#' tips and
+#' `r ape::Nnode(ftol_con_dated_tree) |> scales::number(big.mark = ",")`
+#' internal nodes. Branch lengths are in units of time (Ma). Node labels are
+#' bootstrap support (BS) values (%).
+#'
+#' For details on methods used to infer the tree, see Nitta et al. 2022.
+#'
+#' @format List of class "phylo"
+#' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
+#'   open and continuously updated Fern Tree of Life (FTOL). FIXME ADD DOI
+"ftol_con_dated_tree"
 
 # taxonomy ----
 

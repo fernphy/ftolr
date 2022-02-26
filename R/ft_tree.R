@@ -12,11 +12,12 @@
 #' @param backbone Logical vector of length 1; If `TRUE`, the backbone phylogeny
 #'   (only species with complete plastomes available) will be returned;
 #'   otherwise the phylogeny will include all species. Default `FALSE`.
-#' @param consensus Logical vector of length 1; If `TRUE`, the consensus
-#'   phylogeny will be returned (may include polytomies); otherwise returns the
-#'   maximum-likelihood (bifurcating) tree. Default `FALSE`.
-#' @param drop_og Logical vector of length 1; If `TRUE`, the outgroup will be
-#'   excluded; otherwise the outgroup is included. Default `FALSE`.
+#' @param consensus Logical vector of length 1; If `TRUE`, the majority-rule
+#'   extended consensus phylogeny will be returned; otherwise returns the
+#'   maximum-likelihood tree. Default `FALSE`.
+#' @param drop_og Logical vector of length 1; If `TRUE`, the outgroup
+#'   (non-ferns) will be excluded; otherwise the outgroup is included. Default
+#'   `FALSE`.
 #' @param rooted Logical vector of length 1; If `TRUE`, the phylogeny will be
 #'   rooted on bryophytes; otherwise the phylogeny is unrooted. Default `TRUE`.
 #'
@@ -43,20 +44,33 @@ ft_tree <- function(
   assertthat::assert_that(assertthat::is.flag(backbone))
   assertthat::assert_that(assertthat::is.flag(drop_og))
   assertthat::assert_that(assertthat::is.flag(rooted))
+  assertthat::assert_that(assertthat::is.flag(consensus))
 
   # Check arg combinations
   assertthat::assert_that(
-    !(backbone == TRUE && branch_len == "clado"),
-    msg = "'branch_len' cannot be set to 'caldo' when 'backbone' is set to 'TRUE'"
+    !(backbone == TRUE && branch_len == "ultra"),
+    msg = "Backbone tree not available with ultrametric (dated) branchlengths"
+  )
+  assertthat::assert_that(
+    !(backbone == TRUE && consensus == FALSE),
+    msg = "Backbone tree only available as consensus tree'"
   )
 
   # Choose starting tree
   if (backbone == TRUE) {
     phy <- backbone_tree
   } else if (backbone == FALSE && branch_len == "raw") {
-    phy <- ftol_ml_tree
+    if (consensus == TRUE) {
+      phy <- ftol_con_tree
+    } else {
+      phy <- ftol_ml_tree
+    }
   } else if (backbone == FALSE && branch_len == "ultra") {
-    phy <- ftol_time_tree
+    if (consensus == TRUE) {
+      phy <- ftol_con_dated_tree
+    } else {
+      phy <- ftol_ml_dated_tree
+    }
   }
 
   # Make adjustments

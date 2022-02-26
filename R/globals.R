@@ -2,7 +2,9 @@ utils::globalVariables(
   c(
     "backbone_tree",
     "ftol_ml_tree",
-    "ftol_time_tree",
+    "ftol_ml_dated_tree",
+    "ftol_con_tree",
+    "ftol_con_dated_tree",
     "ftol_ferns",
     "plastome_alignment",
     "plastome_parts",

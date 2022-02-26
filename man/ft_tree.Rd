@@ -22,12 +22,13 @@ time), \code{"raw"} (raw branchlengths in units of genetic change), or \code{"cl
 (only species with complete plastomes available) will be returned;
 otherwise the phylogeny will include all species. Default \code{FALSE}.}
 
-\item{consensus}{Logical vector of length 1; If \code{TRUE}, the consensus
-phylogeny will be returned (may include polytomies); otherwise returns the
-maximum-likelihood (bifurcating) tree. Default \code{FALSE}.}
+\item{consensus}{Logical vector of length 1; If \code{TRUE}, the majority-rule
+extended consensus phylogeny will be returned; otherwise returns the
+maximum-likelihood tree. Default \code{FALSE}.}
 
-\item{drop_og}{Logical vector of length 1; If \code{TRUE}, the outgroup will be
-excluded; otherwise the outgroup is included. Default \code{FALSE}.}
+\item{drop_og}{Logical vector of length 1; If \code{TRUE}, the outgroup
+(non-ferns) will be excluded; otherwise the outgroup is included. Default
+\code{FALSE}.}
 
 \item{rooted}{Logical vector of length 1; If \code{TRUE}, the phylogeny will be
 rooted on bryophytes; otherwise the phylogeny is unrooted. Default \code{TRUE}.}

@@ -11,12 +11,15 @@ List of class "phylo"
 backbone_tree
 }
 \description{
-A maximum-likelihood phylogenetic tree inferred from whole fern plastomes,
-including maximal sampling of available species on GenBank.
+Majority-rule extended consensus phylogenetic tree inferred from whole fern
+plastomes by maximum-likelihood, including maximal sampling of available
+species on GenBank.
 }
 \details{
-Includes 429
-tips and 428
+Includes
+429
+tips and
+428
 internal nodes. Branch lengths are in units of estimated genetic change per
 site (not ultrametric). Node labels are bootstrap support (\%).
 
