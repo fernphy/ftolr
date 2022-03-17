@@ -8,7 +8,8 @@ ft_seqs(
   loci = NULL,
   plastome = FALSE,
   aligned = TRUE,
-  del_gaps = ifelse(is.null(loci), FALSE, TRUE)
+  del_gaps = ifelse(is.null(loci), FALSE, TRUE),
+  drop_og = FALSE
 )
 }
 \arguments{
@@ -28,6 +29,10 @@ Default \code{TRUE}.}
 \item{del_gaps}{Logical vector of length 1; If \code{TRUE}, all gaps
 will be deleted from the alignment. Default is \code{TRUE} if \code{loci} is \code{NULL},
 \code{FALSE} otherwise.}
+
+\item{drop_og}{Logical vector of length 1; If \code{TRUE}, the outgroup
+(non-ferns) will be excluded; otherwise the outgroup is included. Default
+\code{FALSE}.}
 }
 \value{
 List or matrix of class "DNAbin"; DNA sequences.

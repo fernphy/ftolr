@@ -44,6 +44,9 @@ subset_alignment <- function(seqs, loci, parts) {
 #' @param del_gaps Logical vector of length 1; If `TRUE`, all gaps
 #' will be deleted from the alignment. Default is `TRUE` if `loci` is `NULL`,
 #' `FALSE` otherwise.
+#' @param drop_og Logical vector of length 1; If `TRUE`, the outgroup
+#'   (non-ferns) will be excluded; otherwise the outgroup is included. Default
+#'   `FALSE`.
 #'
 #' @return List or matrix of class "DNAbin"; DNA sequences.
 #' @export
@@ -58,7 +61,8 @@ ft_seqs <- function(
   loci = NULL,
   plastome = FALSE,
   aligned = TRUE,
-  del_gaps = ifelse(is.null(loci), FALSE, TRUE)
+  del_gaps = ifelse(is.null(loci), FALSE, TRUE),
+  drop_og = FALSE
 ) {
 
   # Alignment type
@@ -86,6 +90,11 @@ ft_seqs <- function(
     )
     # Subset the alignment
     seqs <- subset_alignment(seqs, loci, parts)
+  }
+
+  # Drop OG
+  if (isTRUE(drop_og)) {
+    seqs <- seqs[ftol_ferns, ]
   }
 
   # Gap deletion
