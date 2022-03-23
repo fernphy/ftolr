@@ -14,9 +14,9 @@ ft_seqs(
 }
 \arguments{
 \item{loci}{Character vector (optional); names of loci to include in the
-output. If \code{NULL} (default), all loci will be included. For a list of valid locus
-names, see \link{plastome_parts} for plastome loci and \link{sanger_parts} for Sanger
-loci.}
+output. If \code{NULL} (default), all loci will be included. For a list of valid
+locus names, see \link{plastome_parts} for plastome loci and \link{sanger_parts} for
+Sanger loci.}
 
 \item{plastome}{Logical vector of length 1; If \code{TRUE}, the alignment will
 include loci and species with complete plastomes available; otherwise
@@ -42,6 +42,10 @@ For details about the data, see \link{plastome_alignment} for plastome sequences
 and \link{sanger_alignment} for Sanger sequences.
 }
 \details{
+After subsetting loci, columns / rows consisting of only gaps
+will be deleted regardless of \code{del_gaps} argument (\code{del_gaps} deletes \emph{all}
+gaps, typically resulting in unaligned sequences).
+
 For details on methods used to assemble alignments, see Nitta et al. 2022.
 }
 \examples{

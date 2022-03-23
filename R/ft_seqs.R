@@ -29,12 +29,16 @@ subset_alignment <- function(seqs, loci, parts) {
 #' For details about the data, see [plastome_alignment] for plastome sequences
 #' and [sanger_alignment] for Sanger sequences.
 #'
+#' After subsetting loci, columns / rows consisting of only gaps
+#' will be deleted regardless of `del_gaps` argument (`del_gaps` deletes *all*
+#' gaps, typically resulting in unaligned sequences).
+#'
 #' For details on methods used to assemble alignments, see Nitta et al. 2022.
 #'
 #' @param loci Character vector (optional); names of loci to include in the
-#' output. If `NULL` (default), all loci will be included. For a list of valid locus
-#' names, see [plastome_parts] for plastome loci and [sanger_parts] for Sanger
-#' loci.
+#' output. If `NULL` (default), all loci will be included. For a list of valid
+#' locus names, see [plastome_parts] for plastome loci and [sanger_parts] for
+#' Sanger loci.
 #' @param plastome Logical vector of length 1; If `TRUE`, the alignment will
 #' include loci and species with complete plastomes available; otherwise
 #' will include Sanger loci and all species. Default `FALSE`.
@@ -106,26 +110,11 @@ ft_seqs <- function(
     seqs <- ape::del.gaps(seqs)
   }
 
-  # Delete any remaining species with all gaps or zero bases
-  # ape::base.freq only works on the whole alignment, so need
-  # to run in a loop to get base freqs for each sequence
+  # Delete any columns/rows with all gaps
+  seqs <- ape::del.colgapsonly(seqs)
+  seqs <- ape::del.rowgapsonly(seqs)
 
-  # Count number of gaps in each sequence
-  seq_list <- as.list(seqs)
-  max_len <- max(sapply(seq_list, length))
-  n_gaps <- vector()
-  for (i in seq_along(seq_list)) {
-    n_gaps[[i]] <- ape::base.freq(seq_list[i], all = TRUE, freq = TRUE)[["-"]]
-  }
-
-  # Species to keep are those with length > 0 and not containing all gaps
-  sp_keep_by_gaps <- n_gaps < max_len
-  sp_keep_by_len <- sapply(seqs, length) > 0
-  sp_keep <- sp_keep_by_gaps & sp_keep_by_len
-
-  if (is.list(seqs)) seqs <- seqs[sp_keep]
-  if (is.matrix(seqs)) seqs <- seqs[sp_keep,]
-
+  # Convert to list if requested
   if (aligned == FALSE) seqs <- as.list(seqs)
 
   return(seqs)
