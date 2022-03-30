@@ -17,12 +17,11 @@ continuously updated fern tree of life (FTOL)
 
 ## Installation
 
-You can install the development version of ftolr from
-[GitHub](https://github.com/) with:
+You can install ftolr from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("joelnitta/ftolr")
+devtools::install_github("fernphy/ftolr")
 ```
 
 ## Examples
@@ -124,7 +123,7 @@ Please also cite the paper describing how the data were generated:
 
     Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. An open and continuously updated fern tree of life (FTOL)
 
-## License
+## Licenses
 
 -   Code: [MIT](LICENSE)
--   Data (files in `data-raw`): [CC0](data-raw/LICENSE)
+-   Data (files in [data-raw](data-raw)): [CC0](data-raw/LICENSE)
