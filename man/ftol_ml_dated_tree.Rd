@@ -12,7 +12,7 @@ ftol_ml_dated_tree
 }
 \description{
 A maximum-likelihood (ML) phylogenetic tree of ferns inferred from seven loci
-and dated using 60 fossil ferns as constraints, including maximal sampling of
+and dated using fossil ferns as constraints, including maximal sampling of
 available species on GenBank.
 }
 \details{
