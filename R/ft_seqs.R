@@ -92,7 +92,7 @@ ft_seqs <- function(
       length(bad_loci) == 0,
       msg = bad_loci_text
     )
-    # Subset the alignment
+    # Subset the alignment by loci
     seqs <- subset_alignment(seqs, loci, parts)
   }
 
@@ -101,7 +101,11 @@ ft_seqs <- function(
     seqs <- seqs[ftol_ferns, ]
   }
 
-  # Gap deletion
+  # Delete any columns/rows with all gaps
+  seqs <- ape::del.colgapsonly(seqs)
+  seqs <- ape::del.rowgapsonly(seqs)
+
+  # If desired, delete *all* gaps
   assertthat::assert_that(
     !(del_gaps == TRUE && aligned == TRUE),
     msg = "Cannot both delete gaps (del_gaps TRUE) and require the sequences to be aligned (aligned TRUE)" # nolint
@@ -109,10 +113,6 @@ ft_seqs <- function(
   if (del_gaps == TRUE) {
     seqs <- ape::del.gaps(seqs)
   }
-
-  # Delete any columns/rows with all gaps
-  seqs <- ape::del.colgapsonly(seqs)
-  seqs <- ape::del.rowgapsonly(seqs)
 
   # Convert to list if requested
   if (aligned == FALSE) seqs <- as.list(seqs)
