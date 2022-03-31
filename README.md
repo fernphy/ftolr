@@ -126,4 +126,4 @@ Please also cite the paper describing how the data were generated:
 ## Licenses
 
 -   Code: [MIT](LICENSE)
--   Data (files in [data-raw](data-raw)): [CC0](data-raw/LICENSE)
+-   Data ([ftol.zip](data-raw/ftol.zip)): [CC0](data-raw/LICENSE)

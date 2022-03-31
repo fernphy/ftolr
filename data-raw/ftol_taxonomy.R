@@ -1,6 +1,12 @@
 ## code to prepare taxonomy datasets goes here
 
-ftol_taxonomy <- readr::read_csv(here::here("data-raw/ftol_sanger_sampling.csv")) |>
+# To import/update all data, run import_data.R
+
+ftol_taxonomy <-
+  archive::archive_read(
+    here::here("data-raw/ftol.zip"),
+    file = "ftol_sanger_sampling.csv") |>
+  readr::read_csv() |>
   dplyr::select(
     species, genus, subfamily, family, suborder, order, major_clade,
     outgroup)
@@ -16,3 +22,6 @@ if (length(ftol_ferns) != dplyr::n_distinct(ftol_ferns)) {
 
 usethis::use_data(ftol_taxonomy, overwrite = TRUE)
 usethis::use_data(ftol_ferns, overwrite = TRUE)
+
+# Clean up any remaining connections from archive
+closeAllConnections()

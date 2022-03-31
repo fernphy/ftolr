@@ -133,6 +133,60 @@
 #'   open and continuously updated Fern Tree of Life (FTOL). FIXME ADD DOI
 "sanger_parts"
 
+# fossils ----
+
+#' Fossil calibration points used for dating Fern Tree of Life (FTOL)
+#'
+#' `con_fossils` was used for the consensus tree; `ml_fossils` was used for the
+#' ML tree.
+#'
+#' The fossils in `con_fossils` and `ml_fossils` are generally the same, but the
+#' node each calibrates may differ between the trees because of differences in
+#' topology. Also, in some cases, a given fossil may only be applied to the ML
+#' or consensus tree (not both) because the topology of the tree makes that
+#' fossil redundant with another fossil.
+#'
+#' The node corresponding to the fossil constraint is defined as the most recent
+#' common ancestor (MRCA, column 'mrca') of two tips columns ('tip_1' and
+#' 'tip_2') for crown affinities, or its parent node (column 'stem_mrca') for
+#' stem affinities. The two tips are identified automatically for monophyletic
+#' clades, or by hand for non-monophyletic clades. 'mrca' is not defined for
+#' monotypic groups (only 'stem_mrca').
+#'
+#' Does not include the constraint on the root of the tree.
+#'
+#' For further details on methods used for molecular dating, see
+#' Nitta et al. 2022.
+#'
+#' @format A tibble (data frame) with `r nrow(con_fossils)` rows and
+#' `r ncol(con_fossils)` columns.
+#' \describe{
+#'   \item{n_fos}{Unique ID number for fossil}
+#'   \item{minimum_age}{Minimum age to apply to fossil constraint}
+#'   \item{node_calibrated}{Node calibrated by fossil constraint.
+#'     Combination of 'affinities' and 'affinities_group'}
+#'   \item{fossil_taxon}{Taxonomic name of fossil (without author)}
+#'   \item{affinities_group}{Type of group the fossil belongs to (crown or stem)}
+#'   \item{affinities}{Narrowest clade the fossil belongs to; the clade whose
+#'     date is constrained by the fossil}
+#'   \item{monophyly}{Are the affinities monophyletic? 'Yes', 'No', or
+#'     'Monotypic'}
+#'   \item{number_tips}{Number of tips in the clade constrained by the fossil}
+#'   \item{mrca}{Node number of MRCA for the clade constrained by the fossil}
+#'   \item{stem_mrca}{Node number of the parent node of the MRCA for
+#'     the clade constrained by the fossil}
+#'  \item{tip_1}{Name of one taxon that defines the clade constrained by the
+#'    fossil}
+#'  \item{tip_2}{Name of another taxon that defines the clade constrained by the
+#'    fossil}
+#'   }
+#' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
+#'   open and continuously updated Fern Tree of Life (FTOL). FIXME ADD DOI
+"con_fossils"
+
+#' @rdname con_fossils
+"ml_fossils"
+
 # trees ----
 
 #' Fern Tree of Life (FTOL) backbone phylogeny
