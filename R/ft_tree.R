@@ -57,6 +57,7 @@ ft_tree <- function(
   )
 
   # Choose starting tree
+  phy <- backbone_tree
   if (backbone == TRUE) {
     phy <- backbone_tree
   } else if (backbone == FALSE && branch_len == "raw") {
@@ -75,8 +76,11 @@ ft_tree <- function(
 
   # Make adjustments
   if (branch_len == "clado") phy$edge.length <- NULL
-  if (drop_og == TRUE) phy <- ape::keep.tip(phy, ftol_ferns)
-  if (rooted == FALSE) phy <- ape::unroot(phy, ftol_ferns)
+  if (drop_og == TRUE) phy <- ape::keep.tip(
+      phy,
+      intersect(phy$tip.label, ftol_ferns)
+    )
+  if (rooted == FALSE) phy <- ape::unroot(phy)
 
   return(phy)
 }

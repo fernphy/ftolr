@@ -98,7 +98,7 @@ ft_seqs <- function(
 
   # Drop OG
   if (isTRUE(drop_og)) {
-    seqs <- seqs[ftol_ferns, ]
+    seqs <- seqs[intersect(ftol_ferns, row.names(seqs)), ]
   }
 
   # Delete any columns/rows with all gaps
