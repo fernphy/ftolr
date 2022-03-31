@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 # ftolr
 
 <!-- badges: start -->
+[![DOI](https://zenodo.org/badge/475787005.svg)](https://zenodo.org/badge/latestdoi/475787005)
 <!-- badges: end -->
 
 ftolr is an R package that provides access to the [Fern Tree of Life (FTOL)](https://fernphy.github.io/) and related datasets.
@@ -74,7 +75,14 @@ If you use this package, please cite it!
 
 Here is an example:
 
-    FTOL working group. (2022). Data for the Fern Tree of Life (FTOL) v1.0.0.
+    FTOL working group. (2022). ftolr: Data for the Fern Tree of Life (FTOL) https://doi.org/10.5281/zenodo.6401660
+
+The example DOI above is for the overall package.
+
+Here is the latest DOI, which you should cite if you are using the
+latest version of the package:
+
+[![DOI](https://zenodo.org/badge/475787005.svg)](https://zenodo.org/badge/latestdoi/475787005)
 
 Please also cite the paper describing how the data were generated:
 
