@@ -13,7 +13,9 @@ ftolr is an R package that provides access to the [Fern Tree of Life
 
 These data were originally compiled using methods described in this
 paper:
-- Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. An open and continuously updated fern tree of life (FTOL) https://doi.org/10.1101/2022.03.31.486640 
+
+Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. An open and
+continuously updated fern tree of life (FTOL)
 
 ## Installation
 
@@ -109,6 +111,17 @@ ft_seqs(loci = "rbcL", aligned = FALSE)
 #>     a     c     g     t 
 #> 0.265 0.217 0.252 0.266 
 #> (Total: 5.98 Mb)
+```
+
+### FTOL data version
+
+You can check the current version of the [FTOL
+data](https://github.com/fernphy/ftol_data) included in `ftolr` with
+`ftol_data_version`:
+
+``` r
+ftol_data_version
+#> [1] "1.0.0"
 ```
 
 ## Citing

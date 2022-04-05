@@ -1,9 +1,9 @@
+devtools::load_all()
+
 # Download data ----
 
-# Set ftol data version
-ftol_data_version <- "1.0.0"
-
-usethis::use_data(ftol_data_version, overwrite = TRUE)
+# Get current ftol data version
+ftol_data_version <- ft_data_ver()
 
 # Download zipped FTOL data
 download.file(

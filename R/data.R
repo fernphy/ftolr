@@ -351,12 +351,3 @@
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 #'   open and continuously updated Fern Tree of Life (FTOL). https://doi.org/10.1101/2022.03.31.486640
 "ftol_ferns"
-
-#' Fern Tree of Life (FTOL) data version
-#'
-#' The version number of the FTOL data included in this R package.
-#'
-#' @format Character vector of length 1.
-#' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-#'   open and continuously updated Fern Tree of Life (FTOL). https://doi.org/10.1101/2022.03.31.486640
-"ftol_data_version"

@@ -69,6 +69,14 @@ ft_seqs()
 ft_seqs(loci = "rbcL", aligned = FALSE)
 ```
 
+### FTOL data version
+
+You can check the current version of the [FTOL data](https://github.com/fernphy/ftol_data) included in `ftolr` with `ftol_data_version`:
+
+```{r data-ver}
+ftol_data_version
+```
+
 ## Citing
 
 If you use this package, please cite it!
