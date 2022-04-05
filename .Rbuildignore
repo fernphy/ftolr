@@ -4,3 +4,5 @@
 ^data-raw$
 ^README\.Rmd$
 ^CITATION\.cff$
+^\.DS_Store$
+^\.Rhistory$

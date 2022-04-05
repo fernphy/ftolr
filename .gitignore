@@ -1,3 +1,6 @@
 .Rproj.user
 .Rhistory
 .Rprofile
+data-raw
+.DS_Store
+.Rhistory
