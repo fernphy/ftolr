@@ -16,6 +16,7 @@ paper:
 
 Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. An open and
 continuously updated fern tree of life (FTOL)
+<https://doi.org/10.1101/2022.03.31.486640>
 
 ## Installation
 
@@ -117,10 +118,10 @@ ft_seqs(loci = "rbcL", aligned = FALSE)
 
 You can check the current version of the [FTOL
 data](https://github.com/fernphy/ftol_data) included in `ftolr` with
-`ftol_data_version`:
+`ft_data_ver()`:
 
 ``` r
-ftol_data_version
+ft_data_ver()
 #> [1] "1.0.0"
 ```
 
