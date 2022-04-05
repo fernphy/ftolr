@@ -1,23 +1,121 @@
-# Copy most recent results files into data-raw
+# Download data ----
 
-library(fs)
-library(here)
+# Set ftol data version
+ftol_data_version <- "1.0.0"
 
-# Specify location of FTOL targets cache
-ftol_cache_path <- "~/repos/ftol/_targets"
+usethis::use_data(ftol_data_version, overwrite = TRUE)
 
-# Copy results files from targets cache
-file_copy(
-  path(ftol_cache_path, "user/results/ftol.zip"),
-  here("data-raw/ftol.zip"),
-  overwrite = TRUE
+# Download zipped FTOL data
+download.file(
+  glue::glue("https://github.com/fernphy/ftol_data/archive/refs/tags/v{ftol_data_version}.zip"), # nolint
+  here::here("data-raw/ftol.zip")
 )
 
-# Update all data files
-source("data-raw/accessions.R")
-source("data-raw/fossils.R")
-source("data-raw/ftol_taxonomy.R")
-source("data-raw/parts.R")
-source("data-raw/phylogeny.R")
-# run this last, as it has a tendency to crash R studio :/
-source("data-raw/alignment.R")
+# Unzip data
+utils::unzip(
+  here::here("data-raw/ftol.zip"),
+  exdir = "data-raw"
+)
+
+ftol_data_dir <- glue::glue("data-raw/ftol_data-{ftol_data_version}")
+
+# Accessions ----
+accessions_long <-
+  fs::path(ftol_data_dir, "ftol_acc_table_long.csv") |>
+  readr::read_csv()
+
+accessions_wide <-
+  fs::path(ftol_data_dir, "ftol_acc_table_wide.csv") |>
+  readr::read_csv()
+
+usethis::use_data(accessions_long, overwrite = TRUE)
+usethis::use_data(accessions_wide, overwrite = TRUE)
+
+# Alignments ----
+plastome_alignment <-
+  fs::path(ftol_data_dir, "ftol_plastome_alignment.fasta.gz") |>
+  ape::read.FASTA() |>
+  as.matrix()
+
+sanger_alignment <-
+  fs::path(ftol_data_dir, "ftol_sanger_alignment.fasta.gz") |>
+  ape::read.FASTA() |>
+  as.matrix()
+
+usethis::use_data(plastome_alignment, overwrite = TRUE)
+usethis::use_data(sanger_alignment, overwrite = TRUE)
+
+# Fossils ----
+ml_fossils <-
+  fs::path(ftol_data_dir, "ftol_sanger_ml_fossils.csv") |>
+  readr::read_csv()
+
+con_fossils <-
+  fs::path(ftol_data_dir, "ftol_sanger_con_fossils.csv") |>
+  readr::read_csv()
+
+usethis::use_data(ml_fossils, overwrite = TRUE)
+usethis::use_data(con_fossils, overwrite = TRUE)
+
+# Taxonomy ----
+ftol_taxonomy <-
+  fs::path(ftol_data_dir, "ftol_sanger_sampling.csv") |>
+  readr::read_csv() |>
+  dplyr::select(
+    species, genus, subfamily, family, suborder, order, major_clade,
+    outgroup)
+
+ftol_ferns <- ftol_taxonomy |>
+  dplyr::filter(outgroup == FALSE) |>
+  dplyr::pull(species) |>
+  sort()
+
+if (length(ftol_ferns) != dplyr::n_distinct(ftol_ferns)) {
+  stop("Not all fern species distinct")
+}
+
+usethis::use_data(ftol_taxonomy, overwrite = TRUE)
+usethis::use_data(ftol_ferns, overwrite = TRUE)
+
+# Partitions -----
+plastome_parts <-
+  fs::path(ftol_data_dir, "ftol_plastome_parts.csv") |>
+  readr::read_csv()
+
+sanger_parts <-
+  fs::path(ftol_data_dir, "ftol_sanger_parts.csv") |>
+  readr::read_csv()
+
+use_data(plastome_parts, overwrite = TRUE)
+use_data(sanger_parts, overwrite = TRUE)
+
+# Phylogeny ----
+backbone_tree <-
+  fs::path(ftol_data_dir, "ftol_plastome_con.tre") |>
+  ape::read.tree()
+
+ftol_con_tree <-
+  fs::path(ftol_data_dir, "ftol_sanger_con.tre") |>
+  ape::read.tree()
+
+ftol_con_dated_tree <-
+  fs::path(ftol_data_dir, "ftol_sanger_con_dated.tre") |>
+  ape::read.tree()
+
+ftol_ml_tree <-
+  fs::path(ftol_data_dir, "ftol_sanger_ml.tre") |>
+  ape::read.tree()
+
+ftol_ml_dated_tree <-
+  fs::path(ftol_data_dir, "ftol_sanger_ml_dated.tre") |>
+  ape::read.tree()
+
+usethis::use_data(backbone_tree, overwrite = TRUE)
+usethis::use_data(ftol_con_tree, overwrite = TRUE)
+usethis::use_data(ftol_con_dated_tree, overwrite = TRUE)
+usethis::use_data(ftol_ml_tree, overwrite = TRUE)
+usethis::use_data(ftol_ml_dated_tree, overwrite = TRUE)
+
+# Clean up ----
+fs::dir_delete(glue::glue("data-raw/ftol_data-{ftol_data_version}"))
+fs::file_delete("data-raw/ftol.zip")
