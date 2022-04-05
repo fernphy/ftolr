@@ -28,7 +28,7 @@
 #' # Default is the consensus tree with branchlengths in units of time
 #' ft_tree()
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-#'   open and continuously updated Fern Tree of Life (FTOL). FIXME ADD DOI
+#'   open and continuously updated Fern Tree of Life (FTOL). https://doi.org/10.1101/2022.03.31.486640
 ft_tree <- function(
   branch_len = "ultra",
   consensus = TRUE,
