@@ -1,6 +1,6 @@
 Package: ftolr
 Title: Data for the Fern Tree of Life (FTOL)
-Version: 1.0.0
+Version: 1.1.0
 Authors@R: 
     person(
     "Joel", "Nitta", email = "joelnitta@gmail.com", 
@@ -11,7 +11,7 @@ Description: Provides the Fern Tree of Life (FTOL) phylogeny and related data
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.0
 Imports: 
     ape,
     assertthat

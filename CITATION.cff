@@ -3,5 +3,5 @@ authors:
 - name: "FTOL working group"
 title: "ftolr: Data for the Fern Tree of Life (FTOL)"
 type: software
-version: v1.0.0
-date-released: 2022-03-31
+version: v1.1.0
+date-released: 2022-06-24
