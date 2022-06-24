@@ -40,12 +40,12 @@ library(ftolr)
 # Default: consensus tree with branchlengths in units of time
 ft_tree()
 #> 
-#> Phylogenetic tree with 5581 tips and 5580 internal nodes.
+#> Phylogenetic tree with 5600 tips and 5599 internal nodes.
 #> 
 #> Tip labels:
-#>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_pteridoides, ...
+#>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_shingii, ...
 #> Node labels:
-#>   Root, 100/100, 100/100, 100/100, 100/100, 100, ...
+#>   99/100, 100/100, 100, 100/100, 100/100, 100/100, ...
 #> 
 #> Rooted; includes branch lengths.
 
@@ -56,12 +56,12 @@ ft_tree(
   drop_og = TRUE
 ) 
 #> 
-#> Phylogenetic tree with 5563 tips and 5562 internal nodes.
+#> Phylogenetic tree with 5582 tips and 5581 internal nodes.
 #> 
 #> Tip labels:
-#>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_pteridoides, ...
+#>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_shingii, ...
 #> Node labels:
-#>   100/100, 100/100, 100, 100/100, 100/100, 100/100, ...
+#>   100/100, 100/100, 100, 100/100, 100, 100/100, ...
 #> 
 #> Rooted; includes branch lengths.
 ```
@@ -75,43 +75,43 @@ alignment) or a list.
 ``` r
 # Default: aligned Sanger sequences
 ft_seqs()
-#> 5581 DNA sequences in binary format stored in a matrix.
+#> 5601 DNA sequences in binary format stored in a matrix.
 #> 
-#> All sequences of same length: 12118 
+#> All sequences of same length: 12716 
 #> 
 #> Labels:
 #> Acrostichum_danaeifolium
 #> Actiniopteris_dimorpha
 #> Actiniopteris_semiflabellata
+#> Adenophorus_sarmentosus
 #> Adenophorus_tenellus
 #> Adiantopsis_alata
-#> Adiantopsis_aurea
 #> ...
 #> 
 #> More than 10 million bases: not printing base composition.
-#> (Total: 67.63 Mb)
+#> (Total: 71.22 Mb)
 
 # Unaligned rbcL
 ft_seqs(loci = "rbcL", aligned = FALSE)
-#> 4796 DNA sequences in binary format stored in a list.
+#> 4828 DNA sequences in binary format stored in a list.
 #> 
-#> Mean sequence length: 1247.184 
+#> Mean sequence length: 1251.168 
 #>    Shortest sequence: 210 
-#>     Longest sequence: 1402 
+#>     Longest sequence: 1428 
 #> 
 #> Labels:
 #> Acrostichum_danaeifolium
 #> Actiniopteris_dimorpha
 #> Actiniopteris_semiflabellata
+#> Adenophorus_sarmentosus
 #> Adenophorus_tenellus
 #> Adiantopsis_alata
-#> Adiantopsis_aurea
 #> ...
 #> 
 #> Base composition:
 #>     a     c     g     t 
-#> 0.265 0.217 0.252 0.266 
-#> (Total: 5.98 Mb)
+#> 0.266 0.217 0.252 0.266 
+#> (Total: 6.04 Mb)
 ```
 
 ### FTOL data version
@@ -122,7 +122,7 @@ data](https://github.com/fernphy/ftol_data) included in `ftolr` with
 
 ``` r
 ft_data_ver()
-#> [1] "1.0.0"
+#> [1] "1.1.0"
 ```
 
 ## Citing
