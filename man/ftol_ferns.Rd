@@ -12,7 +12,7 @@ ftol_ferns
 }
 \description{
 Fern species names included in FTOL in alphabetical order. All species names
-are unique. Includes 5563 species.
+are unique. Includes 5582 species.
 }
 \references{
 Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An

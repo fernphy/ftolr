@@ -17,9 +17,9 @@ species on GenBank.
 }
 \details{
 Includes
-429
+442
 tips and
-428
+441
 internal nodes. Branch lengths are in units of estimated genetic change per
 site (not ultrametric). Node labels are bootstrap support (\%).
 

@@ -16,8 +16,8 @@ obtained from Sanger sequencing, including maximal sampling of available
 species on GenBank.
 }
 \details{
-Includes 5,581
-species and 12,118
+Includes 5,601
+species and 12,716
 bases.
 
 For details on methods used to assemble alignment, see Nitta et al. 2022.
