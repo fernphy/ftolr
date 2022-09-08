@@ -8,8 +8,9 @@
 [![DOI](https://zenodo.org/badge/475787005.svg)](https://zenodo.org/badge/latestdoi/475787005)
 <!-- badges: end -->
 
-ftolr is an R package that provides access to the [Fern Tree of Life
-(FTOL)](https://fernphy.github.io/) and related datasets.
+[ftolr](https://fernphy.github.io/ftolr/) is an R package that provides
+access to the [Fern Tree of Life (FTOL)](https://fernphy.github.io/) and
+related datasets.
 
 These data were originally compiled using methods described in this
 paper:
