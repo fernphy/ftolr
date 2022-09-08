@@ -25,7 +25,7 @@ knitr::opts_chunk$set(
 
 These data were originally compiled using methods described in this paper:
 
-Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. An open and continuously updated fern tree of life. *Frontiers in Plant Science* 13, https://doi.org/10.3389/fpls.2022.909768
+- Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. 2022. An open and continuously updated fern tree of life. *Frontiers in Plant Science* 13, https://doi.org/10.3389/fpls.2022.909768
 
 ## Installation
 
@@ -83,7 +83,7 @@ If you use this package, please cite it!
 
 Here is an example:
 
-    FTOL working group. (2022). ftolr: Data for the Fern Tree of Life (FTOL) https://doi.org/10.5281/zenodo.6401660
+- FTOL working group. 2022. ftolr: Data for the Fern Tree of Life (FTOL) https://doi.org/10.5281/zenodo.6401660
 
 The example DOI above is for the overall package.
 
@@ -94,7 +94,7 @@ latest version of the package:
 
 Please also cite the paper describing how the data were generated:
 
-- Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. An open and continuously updated fern tree of life. *Frontiers in Plant Science* 13, https://doi.org/10.3389/fpls.2022.909768
+- Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. 2022. An open and continuously updated fern tree of life. *Frontiers in Plant Science* 13, https://doi.org/10.3389/fpls.2022.909768
   
 ## Licenses
 
