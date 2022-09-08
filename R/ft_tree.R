@@ -9,17 +9,22 @@
 #'   Must choose from `"ultra"` (ultrametric tree, branchlengths in units of
 #'   time), `"raw"` (raw branchlengths in units of genetic change), or `"clado"`
 #'   (cladogram, no branchlengths).  Default `"ultra"`.
-#' @param consensus Logical vector of length 1; If `TRUE`, the majority-rule
+#' @param consensus Logical vector of length 1; if `TRUE`, the majority-rule
 #'   extended consensus phylogeny will be returned; otherwise returns the
 #'   maximum-likelihood tree. Default `TRUE`.
-#' @param rooted Logical vector of length 1; If `TRUE`, the phylogeny will be
+#' @param rooted Logical vector of length 1; if `TRUE`, the phylogeny will be
 #'   rooted on bryophytes; otherwise the phylogeny is unrooted. Default `TRUE`.
-#' @param backbone Logical vector of length 1; If `TRUE`, the backbone phylogeny
+#' @param backbone Logical vector of length 1; if `TRUE`, the backbone phylogeny
 #'   (only species with complete plastomes available) will be returned;
 #'   otherwise the phylogeny will include all species. Default `FALSE`.
-#' @param drop_og Logical vector of length 1; If `TRUE`, the outgroup
+#' @param drop_og Logical vector of length 1; if `TRUE`, the outgroup
 #'   (non-ferns) will be excluded; otherwise the outgroup is included. Default
 #'   `FALSE`.
+#' @param label_ages Logical vector of length 1; if `TRUE`, internal nodes will
+#'   be labeled with ages. Only works if `branch_len` is `"ultra".`
+#'   Default `FALSE`.
+#' @param decimals Numeric vector of length 1; number of decimals for rounding
+#'   node labels if `label_ages` is `TRUE`; `null` (default) does no rounding.
 #'
 #' @return List of class "phylo"; a phylogenetic tree.
 #' @export
@@ -34,7 +39,9 @@ ft_tree <- function(
   consensus = TRUE,
   rooted = TRUE,
   backbone = FALSE,
-  drop_og = FALSE
+  drop_og = FALSE,
+  label_ages = FALSE,
+  decimals = NULL
 ) {
   # Check arguments
   assertthat::assert_that(assertthat::is.string(branch_len))
@@ -45,6 +52,7 @@ ft_tree <- function(
   assertthat::assert_that(assertthat::is.flag(drop_og))
   assertthat::assert_that(assertthat::is.flag(rooted))
   assertthat::assert_that(assertthat::is.flag(consensus))
+  assertthat::assert_that(assertthat::is.flag(label_ages))
 
   # Check arg combinations
   assertthat::assert_that(
@@ -55,6 +63,15 @@ ft_tree <- function(
     !(backbone == TRUE && consensus == FALSE),
     msg = "Backbone tree only available as consensus tree'"
   )
+  if (isTRUE(label_ages)) {
+    assertthat::assert_that(
+      branch_len == "ultra",
+      msg = "Age labeling at nodes only allowed with ultrametric (dated) branchlengths" # nolint
+  )
+  }
+  if (!is.null(decimals)) {
+    assertthat::assert_that(assertthat::is.number(decimals))
+  }
 
   # Choose starting tree
   phy <- backbone_tree
@@ -75,6 +92,7 @@ ft_tree <- function(
   }
 
   # Make adjustments
+  if (label_ages == TRUE) phy <- label_with_ages(phy, decimals = decimals)
   if (branch_len == "clado") phy$edge.length <- NULL
   if (drop_og == TRUE) phy <- ape::keep.tip(
       phy,
