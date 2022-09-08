@@ -21,6 +21,7 @@
 #'   }
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 #'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#' @keywords data accessions
 "accessions_long"
 
 #' GenBank accessions used in the Fern Tree of Life (FTOL), wide format
@@ -55,6 +56,7 @@
 #'   }
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 #'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#' @keywords data accessions
 "accessions_wide"
 
 # alignments ----
@@ -74,6 +76,7 @@
 #' @format Matrix of class "DNAbin"
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 #'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#' @keywords data alignments
 "plastome_alignment"
 
 #' Aligned (mostly) Sanger DNA sequences used to build Fern Tree of Life (FTOL)
@@ -91,6 +94,7 @@
 #' @format Matrix of class "DNAbin"
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 #'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#' @keywords data alignments
 "sanger_alignment"
 
 #' Start and end positions of loci in plastome DNA sequence alignment
@@ -111,6 +115,7 @@
 #'   }
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 #'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#' @keywords data alignments
 "plastome_parts"
 
 #' Start and end positions of loci in Sanger DNA sequence alignment
@@ -131,6 +136,7 @@
 #'   }
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 #'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#' @keywords data alignments
 "sanger_parts"
 
 # fossils ----
@@ -182,9 +188,11 @@
 #'   }
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 #'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#' @keywords data fossils
 "con_fossils"
 
 #' @rdname con_fossils
+#' @keywords data fossils
 "ml_fossils"
 
 # trees ----
@@ -207,6 +215,7 @@
 #' @format List of class "phylo"
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 #'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#' @keywords data trees
 "backbone_tree"
 
 #' Fern Tree of Life (FTOL) maximum-likelihood phylogeny
@@ -234,6 +243,7 @@
 #' @format List of class "phylo"
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 #'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#' @keywords data trees
 "ftol_ml_tree"
 
 #' Fern Tree of Life (FTOL) dated maximum-likelihood phylogeny
@@ -261,6 +271,7 @@
 #' @format List of class "phylo"
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 #'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#' @keywords data trees
 "ftol_ml_dated_tree"
 
 #' Fern Tree of Life (FTOL) consensus phylogeny
@@ -286,6 +297,7 @@
 #' @format List of class "phylo"
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 #'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#' @keywords data trees
 "ftol_con_tree"
 
 #' Fern Tree of Life (FTOL) dated consensus phylogeny
@@ -311,6 +323,7 @@
 #' @format List of class "phylo"
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 #'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#' @keywords data trees
 "ftol_con_dated_tree"
 
 # taxonomy ----
@@ -340,6 +353,7 @@
 #'   classification for extant lycophytes and ferns. Journal of Systematics and
 #'   Evolution 54:563–603. \url{https://doi.org/10.1111/jse.12229}
 #'
+#' @keywords data taxonomy
 "ftol_taxonomy"
 
 #' Fern Tree of Life (FTOL) fern species
@@ -350,4 +364,5 @@
 #' @format Character vector
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 #'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#' @keywords data taxonomy
 "ftol_ferns"

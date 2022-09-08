@@ -18,4 +18,5 @@ are unique. Includes 5582 species.
 Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
 open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
 }
-\keyword{datasets}
+\keyword{data}
+\keyword{taxonomy}

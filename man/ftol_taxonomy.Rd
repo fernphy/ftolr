@@ -36,4 +36,5 @@ Pteridophyte Phylogeny Group I (2016) A community-derived
 classification for extant lycophytes and ferns. Journal of Systematics and
 Evolution 54:563–603. \url{https://doi.org/10.1111/jse.12229}
 }
-\keyword{datasets}
+\keyword{data}
+\keyword{taxonomy}

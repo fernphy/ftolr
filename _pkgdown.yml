@@ -1,0 +1,45 @@
+url: https://fernphy.github.io/ftolr/
+home:
+  title: Fern tree of life in R
+  description: |
+    Provides access to the Fern Tree of Life (FTOL) and related datasets in R.
+authors:
+  Joel Nitta:
+    href: https://joelnitta.com
+template:
+  bootstrap: 5
+  params:
+    bootswatch: lumen
+reference:
+
+- title: DNA sequences
+  contents: ft_seqs
+
+- title: Phylogeny
+  contents: ft_tree
+
+- title: Versioning
+  contents: ft_data_ver
+  
+- title: Data
+  desc: Datasets included in this package
+
+- subtitle: Accessions
+  contents:
+    - has_keyword("accessions")
+
+- subtitle: Alignments
+  contents:
+    - has_keyword("alignments")
+
+- subtitle: Fossils
+  contents:
+    - has_keyword("fossils")
+
+- subtitle: Taxonomy
+  contents:
+    - has_keyword("taxonomy")
+
+- subtitle: Trees
+  contents:
+    - has_keyword("trees")

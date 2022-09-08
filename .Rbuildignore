@@ -7,3 +7,7 @@
 ^\.DS_Store$
 ^\.Rhistory$
 ^working$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.github$
