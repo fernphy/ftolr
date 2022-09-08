@@ -15,7 +15,7 @@ These data were originally compiled using methods described in this
 paper:
 
 Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. An open and
-continuously updated fern tree of life (FTOL)
+continuously updated fern tree of life. *Frontiers in Plant Science* 13,
 <https://doi.org/10.3389/fpls.2022.909768>
 
 ## Installation
@@ -142,7 +142,9 @@ latest version of the package:
 
 Please also cite the paper describing how the data were generated:
 
-    Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. An open and continuously updated fern tree of life
+-   Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. An open and
+    continuously updated fern tree of life. *Frontiers in Plant Science*
+    13, <https://doi.org/10.3389/fpls.2022.909768>
 
 ## Licenses
 
