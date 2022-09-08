@@ -37,4 +37,8 @@ test_that("invalid input results in error", {
     ft_tree(backbone = TRUE, consensus = FALSE, branch_len = "raw"),
     "Backbone tree only available as consensus tree"
   )
+  expect_error(
+    ft_tree(label_ages = TRUE, branch_len = "raw"),
+    "Age labeling at nodes only allowed with ultrametric"
+  )
 })

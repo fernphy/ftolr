@@ -16,7 +16,7 @@ paper:
 
 Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. An open and
 continuously updated fern tree of life (FTOL)
-<https://doi.org/10.1101/2022.03.31.486640>
+<https://doi.org/10.3389/fpls.2022.909768>
 
 ## Installation
 
@@ -142,7 +142,7 @@ latest version of the package:
 
 Please also cite the paper describing how the data were generated:
 
-    Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. An open and continuously updated fern tree of life (FTOL)
+    Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. An open and continuously updated fern tree of life
 
 ## Licenses
 

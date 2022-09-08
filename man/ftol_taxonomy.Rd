@@ -30,7 +30,7 @@ Taxonomy follows Pteridophyte Phylogeny Group I (2016).
 }
 \references{
 Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-open and continuously updated Fern Tree of Life (FTOL). https://doi.org/10.1101/2022.03.31.486640
+open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
 
 Pteridophyte Phylogeny Group I (2016) A community-derived
 classification for extant lycophytes and ferns. Journal of Systematics and
