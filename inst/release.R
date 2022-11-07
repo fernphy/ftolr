@@ -5,6 +5,9 @@
 library(gert)
 library(desc)
 
+# Make sure README is up-to-date
+devtools::build_readme()
+
 # Specify version and release notes
 # - by default use version produced by ft_data_ver()
 source(here::here("R/ft_data_ver.R"))

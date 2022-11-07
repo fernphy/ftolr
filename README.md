@@ -15,9 +15,9 @@ related datasets.
 These data were originally compiled using methods described in this
 paper:
 
--   Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. 2022. An
-    open and continuously updated fern tree of life. *Frontiers in Plant
-    Science* 13, <https://doi.org/10.3389/fpls.2022.909768>
+- Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. 2022. An open
+  and continuously updated fern tree of life. *Frontiers in Plant
+  Science* 13, <https://doi.org/10.3389/fpls.2022.909768>
 
 ## Installation
 
@@ -41,12 +41,12 @@ library(ftolr)
 # Default: consensus tree with branchlengths in units of time
 ft_tree()
 #> 
-#> Phylogenetic tree with 5600 tips and 5599 internal nodes.
+#> Phylogenetic tree with 5607 tips and 5606 internal nodes.
 #> 
 #> Tip labels:
-#>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_shingii, ...
+#>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_chunii, ...
 #> Node labels:
-#>   99/100, 100/100, 100, 100/100, 100/100, 100/100, ...
+#>   100/100, 100/100, 100, 100/100, 100/100, 100/100, ...
 #> 
 #> Rooted; includes branch lengths.
 
@@ -57,12 +57,12 @@ ft_tree(
   drop_og = TRUE
 ) 
 #> 
-#> Phylogenetic tree with 5582 tips and 5581 internal nodes.
+#> Phylogenetic tree with 5589 tips and 5588 internal nodes.
 #> 
 #> Tip labels:
-#>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_shingii, ...
+#>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_chunii, ...
 #> Node labels:
-#>   100/100, 100/100, 100, 100/100, 100, 100/100, ...
+#>   100/100, 100, 100, 100/100, 100, 100, ...
 #> 
 #> Rooted; includes branch lengths.
 ```
@@ -76,9 +76,9 @@ alignment) or a list.
 ``` r
 # Default: aligned Sanger sequences
 ft_seqs()
-#> 5601 DNA sequences in binary format stored in a matrix.
+#> 5608 DNA sequences in binary format stored in a matrix.
 #> 
-#> All sequences of same length: 12716 
+#> All sequences of same length: 12586 
 #> 
 #> Labels:
 #> Acrostichum_danaeifolium
@@ -90,13 +90,13 @@ ft_seqs()
 #> ...
 #> 
 #> More than 10 million bases: not printing base composition.
-#> (Total: 71.22 Mb)
+#> (Total: 70.58 Mb)
 
 # Unaligned rbcL
 ft_seqs(loci = "rbcL", aligned = FALSE)
-#> 4828 DNA sequences in binary format stored in a list.
+#> 4841 DNA sequences in binary format stored in a list.
 #> 
-#> Mean sequence length: 1251.168 
+#> Mean sequence length: 1252.896 
 #>    Shortest sequence: 210 
 #>     Longest sequence: 1428 
 #> 
@@ -112,7 +112,7 @@ ft_seqs(loci = "rbcL", aligned = FALSE)
 #> Base composition:
 #>     a     c     g     t 
 #> 0.266 0.217 0.252 0.266 
-#> (Total: 6.04 Mb)
+#> (Total: 6.07 Mb)
 ```
 
 ### FTOL data version
@@ -123,7 +123,7 @@ data](https://github.com/fernphy/ftol_data) included in `ftolr` with
 
 ``` r
 ft_data_ver()
-#> [1] "1.1.0"
+#> [1] "1.2.0"
 ```
 
 ## Citing
@@ -132,8 +132,8 @@ If you use this package, please cite it!
 
 Here is an example:
 
--   FTOL working group. 2022. ftolr: Data for the Fern Tree of Life
-    (FTOL) <https://doi.org/10.5281/zenodo.6401660>
+- FTOL working group. 2022. ftolr: Data for the Fern Tree of Life (FTOL)
+  <https://doi.org/10.5281/zenodo.6401660>
 
 The example DOI above is for the overall package.
 
@@ -144,12 +144,12 @@ latest version of the package:
 
 Please also cite the paper describing how the data were generated:
 
--   Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. 2022. An
-    open and continuously updated fern tree of life. *Frontiers in Plant
-    Science* 13, <https://doi.org/10.3389/fpls.2022.909768>
+- Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. 2022. An open
+  and continuously updated fern tree of life. *Frontiers in Plant
+  Science* 13, <https://doi.org/10.3389/fpls.2022.909768>
 
 ## Licenses
 
--   Code: [MIT](LICENSE)
--   Data ([ftol.zip](data-raw/ftol.zip)):
-    [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+- Code: [MIT](LICENSE)
+- Data ([ftol.zip](data-raw/ftol.zip)):
+  [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
