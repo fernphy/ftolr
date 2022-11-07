@@ -6,7 +6,7 @@
 \alias{ml_fossils}
 \title{Fossil calibration points used for dating Fern Tree of Life (FTOL)}
 \format{
-A tibble (data frame) with 52 rows and
+A tibble (data frame) with 54 rows and
 12 columns.
 \describe{
 \item{n_fos}{Unique ID number for fossil}
@@ -29,7 +29,7 @@ fossil}
 fossil}
 }
 
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 52 rows and 12 columns.
+An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 54 rows and 12 columns.
 }
 \usage{
 con_fossils

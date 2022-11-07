@@ -7,5 +7,5 @@
 #' @examples
 #' ft_data_ver()
 ft_data_ver <- function() {
-  "1.1.0"
+  "1.2.0"
 }

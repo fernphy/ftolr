@@ -15,9 +15,9 @@ Concatenation of 79 loci from whole
 fern plastomes, including maximal sampling of available species on GenBank.
 }
 \details{
-Includes 442
+Includes 498
 species and
-74,883
+75,168
 bases.
 
 For details on methods used to assemble alignment, see Nitta et al. 2022.
