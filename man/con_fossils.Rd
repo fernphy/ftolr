@@ -14,7 +14,8 @@ A tibble (data frame) with 54 rows and
 \item{node_calibrated}{Node calibrated by fossil constraint.
 Combination of 'affinities' and 'affinities_group'}
 \item{fossil_taxon}{Taxonomic name of fossil (without author)}
-\item{affinities_group}{Type of group the fossil belongs to (crown or stem)}
+\item{affinities_group}{Type of group the fossil belongs to
+(crown or stem)}
 \item{affinities}{Narrowest clade the fossil belongs to; the clade whose
 date is constrained by the fossil}
 \item{monophyly}{Are the affinities monophyletic? 'Yes', 'No', or
@@ -61,7 +62,8 @@ Nitta et al. 2022.
 }
 \references{
 Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+open and continuously updated fern tree of life.
+https://doi.org/10.3389/fpls.2022.909768
 }
 \keyword{data}
 \keyword{fossils}

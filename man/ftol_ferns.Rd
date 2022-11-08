@@ -16,7 +16,8 @@ are unique. Includes 5589 species.
 }
 \references{
 Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+open and continuously updated fern tree of life.
+https://doi.org/10.3389/fpls.2022.909768
 }
 \keyword{data}
 \keyword{taxonomy}

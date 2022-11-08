@@ -11,7 +11,8 @@ A tibble (data frame) with 14908 rows and
 \item{species}{Species name; matches names of tips in tree}
 \item{locus}{Name of locus (gene or intergenic spacer region)}
 \item{accession}{GenBank accession number}
-\item{seq_len}{Sequence length (bp), excluding any missing or ambiguous bases}
+\item{seq_len}{Sequence length (bp), excluding any missing or ambiguous
+bases}
 \item{sci_name}{Scientific name used in FTOL}
 \item{ncbi_name}{Scientific name used in the NCBI taxonomic database}
 \item{ncbi_taxid}{NCBI taxonomy database unique identifier}
@@ -30,7 +31,8 @@ For details on methods used to infer the tree, see Nitta et al. 2022.
 }
 \references{
 Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+open and continuously updated fern tree of life.
+https://doi.org/10.3389/fpls.2022.909768
 }
 \keyword{accessions}
 \keyword{data}

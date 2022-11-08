@@ -12,7 +12,8 @@
 #'   \item{species}{Species name; matches names of tips in tree}
 #'   \item{locus}{Name of locus (gene or intergenic spacer region)}
 #'   \item{accession}{GenBank accession number}
-#'   \item{seq_len}{Sequence length (bp), excluding any missing or ambiguous bases}
+#'   \item{seq_len}{Sequence length (bp), excluding any missing or ambiguous
+#'         bases}
 #'   \item{sci_name}{Scientific name used in FTOL}
 #'   \item{ncbi_name}{Scientific name used in the NCBI taxonomic database}
 #'   \item{ncbi_taxid}{NCBI taxonomy database unique identifier}
@@ -20,7 +21,8 @@
 #'   taxa (ferns)}
 #'   }
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-#'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#'   open and continuously updated fern tree of life.
+#'   https://doi.org/10.3389/fpls.2022.909768
 #' @keywords data accessions
 "accessions_long"
 
@@ -55,7 +57,8 @@
 #'   taxa (ferns)}
 #'   }
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-#'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#'   open and continuously updated fern tree of life.
+#'   https://doi.org/10.3389/fpls.2022.909768
 #' @keywords data accessions
 "accessions_wide"
 
@@ -75,7 +78,8 @@
 #'
 #' @format Matrix of class "DNAbin"
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-#'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#'   open and continuously updated fern tree of life.
+#'   https://doi.org/10.3389/fpls.2022.909768
 #' @keywords data alignments
 "plastome_alignment"
 
@@ -93,7 +97,8 @@
 #'
 #' @format Matrix of class "DNAbin"
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-#'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#'   open and continuously updated fern tree of life.
+#'   https://doi.org/10.3389/fpls.2022.909768
 #' @keywords data alignments
 "sanger_alignment"
 
@@ -114,7 +119,8 @@
 #'     alignment}
 #'   }
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-#'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#'   open and continuously updated fern tree of life.
+#'   https://doi.org/10.3389/fpls.2022.909768
 #' @keywords data alignments
 "plastome_parts"
 
@@ -135,7 +141,8 @@
 #'     alignment}
 #'   }
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-#'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#'   open and continuously updated fern tree of life.
+#'   https://doi.org/10.3389/fpls.2022.909768
 #' @keywords data alignments
 "sanger_parts"
 
@@ -172,7 +179,8 @@
 #'   \item{node_calibrated}{Node calibrated by fossil constraint.
 #'     Combination of 'affinities' and 'affinities_group'}
 #'   \item{fossil_taxon}{Taxonomic name of fossil (without author)}
-#'   \item{affinities_group}{Type of group the fossil belongs to (crown or stem)}
+#'   \item{affinities_group}{Type of group the fossil belongs to
+#'        (crown or stem)}
 #'   \item{affinities}{Narrowest clade the fossil belongs to; the clade whose
 #'     date is constrained by the fossil}
 #'   \item{monophyly}{Are the affinities monophyletic? 'Yes', 'No', or
@@ -187,7 +195,8 @@
 #'    fossil}
 #'   }
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-#'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#'   open and continuously updated fern tree of life.
+#'   https://doi.org/10.3389/fpls.2022.909768
 #' @keywords data fossils
 "con_fossils"
 
@@ -214,7 +223,8 @@
 #'
 #' @format List of class "phylo"
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-#'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#'   open and continuously updated fern tree of life.
+#'   https://doi.org/10.3389/fpls.2022.909768
 #' @keywords data trees
 "backbone_tree"
 
@@ -242,7 +252,8 @@
 #'
 #' @format List of class "phylo"
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-#'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#'   open and continuously updated fern tree of life.
+#'   https://doi.org/10.3389/fpls.2022.909768
 #' @keywords data trees
 "ftol_ml_tree"
 
@@ -270,7 +281,8 @@
 #'
 #' @format List of class "phylo"
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-#'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#'   open and continuously updated fern tree of life.
+#'   https://doi.org/10.3389/fpls.2022.909768
 #' @keywords data trees
 "ftol_ml_dated_tree"
 
@@ -296,7 +308,8 @@
 #'
 #' @format List of class "phylo"
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-#'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#'   open and continuously updated fern tree of life.
+#'   https://doi.org/10.3389/fpls.2022.909768
 #' @keywords data trees
 "ftol_con_tree"
 
@@ -322,7 +335,8 @@
 #'
 #' @format List of class "phylo"
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-#'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#'   open and continuously updated fern tree of life.
+#'   https://doi.org/10.3389/fpls.2022.909768
 #' @keywords data trees
 "ftol_con_dated_tree"
 
@@ -348,7 +362,8 @@
 #'   \item{outgroup}{Logical; TRUE for outgroup taxa, FALSE for ingroup
 #'   taxa (ferns)} }
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-#'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#'   open and continuously updated fern tree of life.
+#'   https://doi.org/10.3389/fpls.2022.909768
 #' @references Pteridophyte Phylogeny Group I (2016) A community-derived
 #'   classification for extant lycophytes and ferns. Journal of Systematics and
 #'   Evolution 54:563–603. \url{https://doi.org/10.1111/jse.12229}
@@ -363,6 +378,37 @@
 #'
 #' @format Character vector
 #' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
-#'   open and continuously updated fern tree of life. https://doi.org/10.3389/fpls.2022.909768
+#'   open and continuously updated fern tree of life.
+#'   https://doi.org/10.3389/fpls.2022.909768
 #' @keywords data taxonomy
 "ftol_ferns"
+
+#' Fern Tree of Life (FTOL) taxonomic name matching results
+#'
+#' Results of taxonomic name matching and resolution for species included in
+#' FTOL. Original names from the NCBI taxonomic database
+#' (https://www.ncbi.nlm.nih.gov/taxonomy) were matched to those in pteridocat
+#' (https://github.com/fernphy/pteridocat), and synonyms resolved to their
+#' accepted names in pteridocat. For compact printing, it is recommended to use
+#' the `tibble` library (`library(tibble)`).
+#'
+#' @format A tibble (data frame) with `r nrow(ftol_match_results)` rows and
+#' `r ncol(ftol_match_results)` columns.
+#' \describe{
+#'    \item{query}{Queried taxonomic name from NCBI}
+#'    \item{resolved_name}{Resolved name used in FTOL}
+#'    \item{matched_name}{Name matching query in pteridocat}
+#'    \item{resolved_status}{Taxonomic status of resolved name}
+#'    \item{matched_status}{Taxonomic status of matched name}
+#'    \item{match_type}{Type of match assigned by taxontools}
+#'    \item{taxid}{NCBI taxonomic ID}
+#' }
+#' @references Nitta JH, Schuettpelz E, Ramírez-Barahona S, Iwasaki W. (2022) An
+#'   open and continuously updated fern tree of life.
+#'   https://doi.org/10.3389/fpls.2022.909768
+#' @references Pteridophyte Phylogeny Group I (2016) A community-derived
+#'   classification for extant lycophytes and ferns. Journal of Systematics and
+#'   Evolution 54:563–603. \url{https://doi.org/10.1111/jse.12229}
+#'
+#' @keywords data taxonomy
+"ftol_match_results"

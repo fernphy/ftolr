@@ -14,9 +14,7 @@ source(here::here("R/ft_data_ver.R"))
 new_ver <- glue::glue("v{ft_data_ver()}")
 
 notes <- paste(
-  "Built with DNA sequences in",
-  "[GenBank](https://ftp.ncbi.nlm.nih.gov/genbank/)",
-  "release 251 (cutoff date 2022-08-15)"
+  "Adds ftol_match_results"
 )
 
 # Update version in DESCRIPTION

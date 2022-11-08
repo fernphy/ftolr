@@ -77,6 +77,12 @@ if (length(ftol_ferns) != dplyr::n_distinct(ftol_ferns)) {
 usethis::use_data(ftol_taxonomy, overwrite = TRUE)
 usethis::use_data(ftol_ferns, overwrite = TRUE)
 
+ftol_match_results <-
+  fs::path(ftol_data_dir, "ftol_match_results.csv") |>
+  readr::read_csv(col_types = readr::cols(.default = readr::col_character()))
+
+usethis::use_data(ftol_match_results, overwrite = TRUE)
+
 # Partitions -----
 plastome_parts <-
   fs::path(ftol_data_dir, "ftol_plastome_parts.csv") |>
