@@ -123,7 +123,7 @@ data](https://github.com/fernphy/ftol_data) included in `ftolr` with
 
 ``` r
 ft_data_ver()
-#> [1] "1.2.0"
+#> [1] "1.2.1"
 ```
 
 ## Citing
