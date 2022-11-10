@@ -2,16 +2,27 @@
 % Please edit documentation in R/ft_data_ver.R
 \name{ft_data_ver}
 \alias{ft_data_ver}
-\title{Current Fern Tree of Life (FTOL) data version}
+\title{Current Fern Tree of Life (FTOL) version and related metadata}
 \usage{
-ft_data_ver()
+ft_data_ver(what = "ftol")
+}
+\arguments{
+\item{what}{Character vector of length 1; what type of data to return. Must
+choose from "ftol" (FTOL data version; default), "gb" (version of GenBank
+data used to build FTOL), or "cutoff" (cutoff date of GenBank data).}
 }
 \value{
-Character vector of length 1; the current FTOL data version loaded
-by this package
+Character vector of length 1
 }
 \description{
-Current Fern Tree of Life (FTOL) data version
+Current Fern Tree of Life (FTOL) version and related metadata
+}
+\details{
+FTOL is built from DNA sequence data obtained from the NCBI GenBank
+FTP server (\url{https://ftp.ncbi.nlm.nih.gov/genbank/}), which releases updated
+datasets periodically. For more information about the current GenBank data
+release, see the
+\href{https://ftp.ncbi.nlm.nih.gov/genbank/gbrel.txt}{release notes}.
 }
 \examples{
 ft_data_ver()
