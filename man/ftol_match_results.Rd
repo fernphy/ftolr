@@ -5,7 +5,7 @@
 \alias{ftol_match_results}
 \title{Fern Tree of Life (FTOL) taxonomic name matching results}
 \format{
-A tibble (data frame) with 6474 rows and
+A tibble (data frame) with 6476 rows and
 7 columns.
 \describe{
 \item{query}{Queried taxonomic name from NCBI}

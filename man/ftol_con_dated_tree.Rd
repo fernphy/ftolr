@@ -18,13 +18,13 @@ constraints, including maximal sampling of available species on GenBank.
 \details{
 A \link[=backbone_tree]{backbone phylogeny} based on full plastome sequences
 including
-497
+503
 tips was first inferred and used as a constraint tree for the consensus tree.
 
 Includes
-5,607
+5,610
 tips and
-5,606
+5,609
 internal nodes. Branch lengths are in units of time (Ma). Node labels are
 bootstrap support (BS) values (\%).
 

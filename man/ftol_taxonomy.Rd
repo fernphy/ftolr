@@ -5,7 +5,7 @@
 \alias{ftol_taxonomy}
 \title{Fern Tree of Life (FTOL) taxonomic data}
 \format{
-A tibble (data frame) with 5608 rows and
+A tibble (data frame) with 5611 rows and
 8 columns.
 \describe{ \item{species}{Species name}
 \item{genus}{Genus name}

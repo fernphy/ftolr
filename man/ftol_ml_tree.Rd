@@ -17,13 +17,13 @@ loci, including maximal sampling of available species on GenBank.
 \details{
 A \link[=backbone_tree]{backbone phylogeny} based on full plastome sequences
 including
-497
+503
 tips was first inferred and used as a constraint tree for the ML tree.
 
 Includes
-5,608
+5,611
 tips and
-5,607
+5,610
 internal nodes. Branch lengths are in units of estimated genetic change per
 site (not ultrametric). Node labels are bootstrap support (BS) values (\%)
 separated by a forward slash. BS value before the slash is BS calculated

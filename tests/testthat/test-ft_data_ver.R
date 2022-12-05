@@ -1,12 +1,12 @@
 test_that("ft_data_ver works", {
   expect_equal(
-    ft_data_ver(), "1.2.1"
+    ft_data_ver(), "1.3.0"
   )
   expect_equal(
-    ft_data_ver("gb"), "251"
+    ft_data_ver("gb"), "252"
   )
   expect_equal(
-    ft_data_ver("cutoff"), "2022-08-15"
+    ft_data_ver("cutoff"), "2022-10-15"
   )
   expect_error(
     ft_data_ver("foo", "'what' must be one of 'ftol', 'gb', or 'cutoff'")

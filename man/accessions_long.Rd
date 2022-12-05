@@ -5,7 +5,7 @@
 \alias{accessions_long}
 \title{GenBank accessions used in the Fern Tree of Life (FTOL), long format}
 \format{
-A tibble (data frame) with 14908 rows and
+A tibble (data frame) with 14965 rows and
 8 columns.
 \describe{
 \item{species}{Species name; matches names of tips in tree}
