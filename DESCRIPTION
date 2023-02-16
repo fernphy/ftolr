@@ -1,6 +1,6 @@
 Package: ftolr
 Title: Data for the Fern Tree of Life (FTOL)
-Version: 1.3.0.9000
+Version: 1.4.0
 Authors@R: 
     person(
     "Joel", "Nitta", email = "joelnitta@gmail.com", 
