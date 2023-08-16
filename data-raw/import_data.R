@@ -92,8 +92,8 @@ sanger_parts <-
   fs::path(ftol_data_dir, "ftol_sanger_parts.csv") |>
   readr::read_csv()
 
-use_data(plastome_parts, overwrite = TRUE)
-use_data(sanger_parts, overwrite = TRUE)
+usethis::use_data(plastome_parts, overwrite = TRUE)
+usethis::use_data(sanger_parts, overwrite = TRUE)
 
 # Phylogeny ----
 backbone_tree <-
