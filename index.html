@@ -28,7 +28,7 @@
     
     <a class="navbar-brand me-2" href="index.html">ftolr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.4.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.5.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,12 +83,12 @@
 <span><span class="co"># Default: consensus tree with branchlengths in units of time</span></span>
 <span><span class="fu"><a href="reference/ft_tree.html">ft_tree</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Phylogenetic tree with 5703 tips and 5702 internal nodes.</span></span>
+<span><span class="co">#&gt; Phylogenetic tree with 5768 tips and 5767 internal nodes.</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Tip labels:</span></span>
 <span><span class="co">#&gt;   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_pteridoides, ...</span></span>
 <span><span class="co">#&gt; Node labels:</span></span>
-<span><span class="co">#&gt;   99/100, 100/100, 100, 100/100, 100/100, 100/100, ...</span></span>
+<span><span class="co">#&gt;   100/100, 100/100, 100, 100/100, 100/100, 100/100, ...</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Rooted; includes branch lengths.</span></span>
 <span></span>
@@ -99,12 +99,12 @@
 <span>  drop_og <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span> </span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Phylogenetic tree with 5685 tips and 5684 internal nodes.</span></span>
+<span><span class="co">#&gt; Phylogenetic tree with 5750 tips and 5749 internal nodes.</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Tip labels:</span></span>
 <span><span class="co">#&gt;   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_pteridoides, ...</span></span>
 <span><span class="co">#&gt; Node labels:</span></span>
-<span><span class="co">#&gt;   100/100, 100, 100/100, 100/100, 100/100, 50/100, ...</span></span>
+<span><span class="co">#&gt;   100/100, 100/100, 100, 100/100, 100, 90/100, ...</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Rooted; includes branch lengths.</span></span></code></pre></div>
 </div>
@@ -115,9 +115,9 @@
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Default: aligned Sanger sequences</span></span>
 <span><span class="fu"><a href="reference/ft_seqs.html">ft_seqs</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 5704 DNA sequences in binary format stored in a matrix.</span></span>
+<span><span class="co">#&gt; 5769 DNA sequences in binary format stored in a matrix.</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; All sequences of same length: 12726 </span></span>
+<span><span class="co">#&gt; All sequences of same length: 12823 </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Labels:</span></span>
 <span><span class="co">#&gt; Acrostichum_danaeifolium</span></span>
@@ -129,13 +129,13 @@
 <span><span class="co">#&gt; ...</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; More than 10 million bases: not printing base composition.</span></span>
-<span><span class="co">#&gt; (Total: 72.59 Mb)</span></span>
+<span><span class="co">#&gt; (Total: 73.98 Mb)</span></span>
 <span></span>
 <span><span class="co"># Unaligned rbcL</span></span>
 <span><span class="fu"><a href="reference/ft_seqs.html">ft_seqs</a></span><span class="op">(</span>loci <span class="op">=</span> <span class="st">"rbcL"</span>, aligned <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 4931 DNA sequences in binary format stored in a list.</span></span>
+<span><span class="co">#&gt; 4988 DNA sequences in binary format stored in a list.</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Mean sequence length: 1252.987 </span></span>
+<span><span class="co">#&gt; Mean sequence length: 1253.756 </span></span>
 <span><span class="co">#&gt;    Shortest sequence: 210 </span></span>
 <span><span class="co">#&gt;     Longest sequence: 1428 </span></span>
 <span><span class="co">#&gt; </span></span>
@@ -151,7 +151,7 @@
 <span><span class="co">#&gt; Base composition:</span></span>
 <span><span class="co">#&gt;     a     c     g     t </span></span>
 <span><span class="co">#&gt; 0.266 0.217 0.252 0.266 </span></span>
-<span><span class="co">#&gt; (Total: 6.18 Mb)</span></span></code></pre></div>
+<span><span class="co">#&gt; (Total: 6.25 Mb)</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="ftol-data-version">FTOL data version<a class="anchor" aria-label="anchor" href="#ftol-data-version"></a>
@@ -159,7 +159,7 @@
 <p>You can check the current version of the <a href="https://github.com/fernphy/ftol_data" class="external-link">FTOL data</a> included in <code>ftolr</code> with <code><a href="reference/ft_data_ver.html">ft_data_ver()</a></code>:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/ft_data_ver.html">ft_data_ver</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "1.4.0"</span></span></code></pre></div>
+<span><span class="co">#&gt; [1] "1.5.0"</span></span></code></pre></div>
 </div>
 </div>
 <div class="section level2">

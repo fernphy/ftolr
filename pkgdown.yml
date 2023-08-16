@@ -2,7 +2,7 @@ pandoc: 2.19.2
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles: {}
-last_built: 2023-02-16T03:44Z
+last_built: 2023-08-16T22:57Z
 urls:
   reference: https://fernphy.github.io/ftolr/reference
   article: https://fernphy.github.io/ftolr/articles
