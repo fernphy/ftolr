@@ -19,9 +19,9 @@ ft_data_ver <- function(what = "ftol") {
     msg = "'what' must be a character vector of length 1")
   switch(
     what,
-    ftol = "1.5.0",
-    gb = "256",
-    cutoff = "2023-06-15",
+    ftol = "1.5.1",
+    gb = "258",
+    cutoff = "2023-10-15",
     "'what' must be one of 'ftol', 'gb', or 'cutoff'"
   )
 }
