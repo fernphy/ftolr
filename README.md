@@ -41,12 +41,12 @@ library(ftolr)
 # Default: consensus tree with branchlengths in units of time
 ft_tree()
 #> 
-#> Phylogenetic tree with 5768 tips and 5767 internal nodes.
+#> Phylogenetic tree with 5803 tips and 5802 internal nodes.
 #> 
 #> Tip labels:
 #>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_pteridoides, ...
 #> Node labels:
-#>   100/100, 100/100, 100, 100/100, 100/100, 100/100, ...
+#>   100/100, 100/100, 100, 100/100, 100/100, 100, ...
 #> 
 #> Rooted; includes branch lengths.
 
@@ -57,12 +57,12 @@ ft_tree(
   drop_og = TRUE
 ) 
 #> 
-#> Phylogenetic tree with 5750 tips and 5749 internal nodes.
+#> Phylogenetic tree with 5785 tips and 5784 internal nodes.
 #> 
 #> Tip labels:
 #>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_pteridoides, ...
 #> Node labels:
-#>   100/100, 100/100, 100, 100/100, 100, 90/100, ...
+#>   100, 100/100, 100/100, 100/100, 95/100, 100/100, ...
 #> 
 #> Rooted; includes branch lengths.
 ```
@@ -76,9 +76,9 @@ alignment) or a list.
 ``` r
 # Default: aligned Sanger sequences
 ft_seqs()
-#> 5769 DNA sequences in binary format stored in a matrix.
+#> 5804 DNA sequences in binary format stored in a matrix.
 #> 
-#> All sequences of same length: 12823 
+#> All sequences of same length: 12879 
 #> 
 #> Labels:
 #> Acrostichum_danaeifolium
@@ -90,13 +90,13 @@ ft_seqs()
 #> ...
 #> 
 #> More than 10 million bases: not printing base composition.
-#> (Total: 73.98 Mb)
+#> (Total: 74.75 Mb)
 
 # Unaligned rbcL
 ft_seqs(loci = "rbcL", aligned = FALSE)
-#> 4988 DNA sequences in binary format stored in a list.
+#> 5007 DNA sequences in binary format stored in a list.
 #> 
-#> Mean sequence length: 1253.756 
+#> Mean sequence length: 1254.623 
 #>    Shortest sequence: 210 
 #>     Longest sequence: 1428 
 #> 
@@ -112,7 +112,7 @@ ft_seqs(loci = "rbcL", aligned = FALSE)
 #> Base composition:
 #>     a     c     g     t 
 #> 0.266 0.217 0.252 0.266 
-#> (Total: 6.25 Mb)
+#> (Total: 6.28 Mb)
 ```
 
 ### FTOL data version
@@ -123,7 +123,7 @@ data](https://github.com/fernphy/ftol_data) included in `ftolr` with
 
 ``` r
 ft_data_ver()
-#> [1] "1.5.0"
+#> [1] "1.5.1"
 ```
 
 ## Citing
