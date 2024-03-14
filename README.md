@@ -44,9 +44,9 @@ ft_tree()
 #> Phylogenetic tree with 5803 tips and 5802 internal nodes.
 #> 
 #> Tip labels:
-#>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_pteridoides, ...
+#>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_chunii, ...
 #> Node labels:
-#>   100/100, 100/100, 100, 100/100, 100/100, 100, ...
+#>   100/100, 100/100, 100, 100/100, 100/100, 100/100, ...
 #> 
 #> Rooted; includes branch lengths.
 
@@ -60,9 +60,9 @@ ft_tree(
 #> Phylogenetic tree with 5785 tips and 5784 internal nodes.
 #> 
 #> Tip labels:
-#>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_pteridoides, ...
+#>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_chunii, ...
 #> Node labels:
-#>   100, 100/100, 100/100, 100/100, 95/100, 100/100, ...
+#>   100/100, 100, 100/100, 97/100, 100, 90/100, ...
 #> 
 #> Rooted; includes branch lengths.
 ```
@@ -78,7 +78,7 @@ alignment) or a list.
 ft_seqs()
 #> 5804 DNA sequences in binary format stored in a matrix.
 #> 
-#> All sequences of same length: 12879 
+#> All sequences of same length: 12710 
 #> 
 #> Labels:
 #> Acrostichum_danaeifolium
@@ -90,13 +90,13 @@ ft_seqs()
 #> ...
 #> 
 #> More than 10 million bases: not printing base composition.
-#> (Total: 74.75 Mb)
+#> (Total: 73.77 Mb)
 
 # Unaligned rbcL
 ft_seqs(loci = "rbcL", aligned = FALSE)
-#> 5007 DNA sequences in binary format stored in a list.
+#> 5004 DNA sequences in binary format stored in a list.
 #> 
-#> Mean sequence length: 1254.623 
+#> Mean sequence length: 1254.969 
 #>    Shortest sequence: 210 
 #>     Longest sequence: 1428 
 #> 
@@ -123,7 +123,7 @@ data](https://github.com/fernphy/ftol_data) included in `ftolr` with
 
 ``` r
 ft_data_ver()
-#> [1] "1.5.1"
+#> [1] "1.6.0"
 ```
 
 ## Citing
