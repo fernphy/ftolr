@@ -41,10 +41,10 @@ library(ftolr)
 # Default: consensus tree with branchlengths in units of time
 ft_tree()
 #> 
-#> Phylogenetic tree with 5803 tips and 5802 internal nodes.
+#> Phylogenetic tree with 5868 tips and 5867 internal nodes.
 #> 
 #> Tip labels:
-#>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_chunii, ...
+#>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_pteridoides, ...
 #> Node labels:
 #>   100/100, 100/100, 100, 100/100, 100/100, 100/100, ...
 #> 
@@ -57,12 +57,12 @@ ft_tree(
   drop_og = TRUE
 ) 
 #> 
-#> Phylogenetic tree with 5785 tips and 5784 internal nodes.
+#> Phylogenetic tree with 5850 tips and 5849 internal nodes.
 #> 
 #> Tip labels:
-#>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_chunii, ...
+#>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_pteridoides, ...
 #> Node labels:
-#>   100/100, 100, 100/100, 97/100, 100, 90/100, ...
+#>   100/100, 100/100, 100/100, 100/100, 80/100, 100, ...
 #> 
 #> Rooted; includes branch lengths.
 ```
@@ -76,9 +76,9 @@ alignment) or a list.
 ``` r
 # Default: aligned Sanger sequences
 ft_seqs()
-#> 5804 DNA sequences in binary format stored in a matrix.
+#> 5869 DNA sequences in binary format stored in a matrix.
 #> 
-#> All sequences of same length: 12710 
+#> All sequences of same length: 13384 
 #> 
 #> Labels:
 #> Acrostichum_danaeifolium
@@ -90,14 +90,14 @@ ft_seqs()
 #> ...
 #> 
 #> More than 10 million bases: not printing base composition.
-#> (Total: 73.77 Mb)
+#> (Total: 78.55 Mb)
 
 # Unaligned rbcL
 ft_seqs(loci = "rbcL", aligned = FALSE)
-#> 5004 DNA sequences in binary format stored in a list.
+#> 5068 DNA sequences in binary format stored in a list.
 #> 
-#> Mean sequence length: 1254.969 
-#>    Shortest sequence: 210 
+#> Mean sequence length: 1256.457 
+#>    Shortest sequence: 214 
 #>     Longest sequence: 1428 
 #> 
 #> Labels:
@@ -112,7 +112,7 @@ ft_seqs(loci = "rbcL", aligned = FALSE)
 #> Base composition:
 #>     a     c     g     t 
 #> 0.266 0.217 0.252 0.266 
-#> (Total: 6.28 Mb)
+#> (Total: 6.37 Mb)
 ```
 
 ### FTOL data version
@@ -123,7 +123,7 @@ data](https://github.com/fernphy/ftol_data) included in `ftolr` with
 
 ``` r
 ft_data_ver()
-#> [1] "1.6.0"
+#> [1] "1.7.0"
 ```
 
 ## Citing
