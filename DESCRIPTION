@@ -24,7 +24,7 @@ Suggests:
     tidyverse,
     patrick
 Depends: 
-    R (>= 2.10)
+    R (>= 3.5)
 LazyData: true
 LazyDataCompression: bzip2
 Config/testthat/edition: 3
