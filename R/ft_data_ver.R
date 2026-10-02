@@ -21,7 +21,7 @@ ft_data_ver <- function(what = "ftol") {
     what,
     ftol = "1.9.0",
     gb = "273",
-    cutoff = "2026/08/02",
+    cutoff = "2026-08-02",
     "'what' must be one of 'ftol', 'gb', or 'cutoff'"
   )
 }
