@@ -16,6 +16,7 @@ paper:
 You can install ftolr from [GitHub](https://github.com/) with:
 
 ``` r
+
 # install.packages("devtools")
 devtools::install_github("fernphy/ftolr")
 ```
@@ -30,11 +31,12 @@ options available to control branch lengths, presence or absence of
 outgroup, and sampling scheme.
 
 ``` r
+
 library(ftolr)
 # Default: consensus tree with branchlengths in units of time
 ft_tree()
 #> 
-#> Phylogenetic tree with 6234 tips and 6233 internal nodes.
+#> Phylogenetic tree with 6406 tips and 6405 internal nodes.
 #> 
 #> Tip labels:
 #>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_pteridoides, ...
@@ -50,12 +52,12 @@ ft_tree(
   drop_og = TRUE
 ) 
 #> 
-#> Phylogenetic tree with 6216 tips and 6215 internal nodes.
+#> Phylogenetic tree with 6388 tips and 6387 internal nodes.
 #> 
 #> Tip labels:
 #>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_pteridoides, ...
 #> Node labels:
-#>   100/100, 100/100, 100/100, 100, 100, 95/100, ...
+#>   100/100, 100/100, 100/100, 100/100, 68/100, 100, ...
 #> 
 #> Rooted; includes branch length(s).
 ```
@@ -67,11 +69,12 @@ be subset by locus (gene) name and can be formatted as a matrix (DNA
 alignment) or a list.
 
 ``` r
+
 # Default: aligned Sanger sequences
 ft_seqs()
-#> 6235 DNA sequences in binary format stored in a matrix.
+#> 6407 DNA sequences in binary format stored in a matrix.
 #> 
-#> All sequences of same length: 13335 
+#> All sequences of same length: 13191 
 #> 
 #> Labels:
 #> Acrostichum_danaeifolium
@@ -83,13 +86,13 @@ ft_seqs()
 #> ...
 #> 
 #> More than 10 million bases: not printing base composition.
-#> (Total: 83.14 Mb)
+#> (Total: 84.51 Mb)
 
 # Unaligned rbcL
 ft_seqs(loci = "rbcL", aligned = FALSE)
-#> 5471 DNA sequences in binary format stored in a list.
+#> 5589 DNA sequences in binary format stored in a list.
 #> 
-#> Mean sequence length: 1258.485 
+#> Mean sequence length: 1262.756 
 #>    Shortest sequence: 214 
 #>     Longest sequence: 1428 
 #> 
@@ -104,8 +107,8 @@ ft_seqs(loci = "rbcL", aligned = FALSE)
 #> 
 #> Base composition:
 #>     a     c     g     t 
-#> 0.267 0.217 0.251 0.266 
-#> (Total: 6.89 Mb)
+#> 0.267 0.216 0.251 0.266 
+#> (Total: 7.06 Mb)
 ```
 
 ### FTOL data version
@@ -115,8 +118,9 @@ data](https://github.com/fernphy/ftol_data) included in `ftolr` with
 [`ft_data_ver()`](https://fernphy.github.io/ftolr/reference/ft_data_ver.md):
 
 ``` r
+
 ft_data_ver()
-#> [1] "1.8.0"
+#> [1] "1.9.0"
 ```
 
 ## Citing

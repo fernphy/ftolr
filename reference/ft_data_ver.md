@@ -32,5 +32,5 @@ notes](https://ftp.ncbi.nlm.nih.gov/genbank/gbrel.txt).
 
 ``` r
 ft_data_ver()
-#> [1] "1.8.0"
+#> [1] "1.9.0"
 ```

@@ -78,7 +78,7 @@ https://doi.org/10.3389/fpls.2022.909768
 # Default is the consensus tree with branchlengths in units of time
 ft_tree()
 #> 
-#> Phylogenetic tree with 6234 tips and 6233 internal nodes.
+#> Phylogenetic tree with 6406 tips and 6405 internal nodes.
 #> 
 #> Tip labels:
 #>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_pteridoides, ...

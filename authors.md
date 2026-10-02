@@ -8,11 +8,11 @@
 ## Citation
 
 Nitta J (2026). *ftolr: Data for the Fern Tree of Life (FTOL)*. R
-package version 1.8.0.
+package version 1.9.0.
 
     @Manual{,
       title = {ftolr: Data for the Fern Tree of Life (FTOL)},
       author = {Joel Nitta},
       year = {2026},
-      note = {R package version 1.8.0},
+      note = {R package version 1.9.0},
     }

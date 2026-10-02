@@ -77,9 +77,9 @@ https://doi.org/10.3389/fpls.2022.909768
 ``` r
 # Default is aligned Sanger sequences
 ft_seqs()
-#> 6235 DNA sequences in binary format stored in a matrix.
+#> 6407 DNA sequences in binary format stored in a matrix.
 #> 
-#> All sequences of same length: 13335 
+#> All sequences of same length: 13191 
 #> 
 #> Labels:
 #> Acrostichum_danaeifolium
@@ -91,5 +91,5 @@ ft_seqs()
 #> ...
 #> 
 #> More than 10 million bases: not printing base composition.
-#> (Total: 83.14 Mb)
+#> (Total: 84.51 Mb)
 ```
