@@ -6,7 +6,13 @@ library(gert)
 library(desc)
 
 # Make sure README is up-to-date
+# (rendering re-runs the examples, so README.md usually changes; commit it
+# here, otherwise the clean-repo check below always fails)
 devtools::build_readme()
+if ("README.md" %in% git_status()$file) {
+  git_add("README.md")
+  git_commit("Update README")
+}
 
 # Specify version and release notes
 # - by default use version produced by ft_data_ver()

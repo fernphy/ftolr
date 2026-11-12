@@ -41,7 +41,7 @@ library(ftolr)
 # Default: consensus tree with branchlengths in units of time
 ft_tree()
 #> 
-#> Phylogenetic tree with 6406 tips and 6405 internal nodes.
+#> Phylogenetic tree with 6410 tips and 6409 internal nodes.
 #> 
 #> Tip labels:
 #>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_pteridoides, ...
@@ -57,12 +57,12 @@ ft_tree(
   drop_og = TRUE
 ) 
 #> 
-#> Phylogenetic tree with 6388 tips and 6387 internal nodes.
+#> Phylogenetic tree with 6392 tips and 6391 internal nodes.
 #> 
 #> Tip labels:
 #>   Acrostichum_danaeifolium, Acrostichum_speciosum, Acrostichum_aureum, Ceratopteris_richardii, Ceratopteris_cornuta, Ceratopteris_pteridoides, ...
 #> Node labels:
-#>   100/100, 100/100, 100/100, 100/100, 68/100, 100, ...
+#>   100/100, 100/100, 100/100, 100/100, 90/100, 100/100, ...
 #> 
 #> Rooted; includes branch length(s).
 ```
@@ -76,9 +76,9 @@ alignment) or a list.
 ``` r
 # Default: aligned Sanger sequences
 ft_seqs()
-#> 6407 DNA sequences in binary format stored in a matrix.
+#> 6411 DNA sequences in binary format stored in a matrix.
 #> 
-#> All sequences of same length: 13191 
+#> All sequences of same length: 13166 
 #> 
 #> Labels:
 #> Acrostichum_danaeifolium
@@ -90,13 +90,13 @@ ft_seqs()
 #> ...
 #> 
 #> More than 10 million bases: not printing base composition.
-#> (Total: 84.51 Mb)
+#> (Total: 84.41 Mb)
 
 # Unaligned rbcL
 ft_seqs(loci = "rbcL", aligned = FALSE)
-#> 5589 DNA sequences in binary format stored in a list.
+#> 5592 DNA sequences in binary format stored in a list.
 #> 
-#> Mean sequence length: 1262.756 
+#> Mean sequence length: 1263.151 
 #>    Shortest sequence: 214 
 #>     Longest sequence: 1428 
 #> 
@@ -123,7 +123,7 @@ data](https://github.com/fernphy/ftol_data) included in `ftolr` with
 
 ``` r
 ft_data_ver()
-#> [1] "1.9.0"
+#> [1] "1.10.0"
 ```
 
 ## Citing
